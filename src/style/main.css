@@ -16,7 +16,7 @@ html{
 body{
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
     margin: 0;
     /* From acc*/
@@ -35,11 +35,60 @@ body{
 
 
 .body-wraper{
-    flex:1;
+    flex:1 ;
     width: 100%;
 
-    background-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: row;
 }
+
+
+    .sidebar{
+        height: 100%;
+        width: 25%;
+        background-color: #BB86FC;
+    }
+
+
+    .content{
+        height: 100%;
+        width: 75%;
+        background-color: white;
+    }
+        
+
+        .section{
+            height: 35%;
+            width: 100%;
+            margin: 10px;
+            margin-top: 50px;
+
+
+            display: grid;
+            flex-direction: column;
+            background-color: aquamarine;
+        }
+
+
+            .section-title{
+                height: 20%;
+                width: 100%;
+
+                font-size: 50px;
+
+                padding: 0;
+                margin: 0;
+            }
+
+
+            .section-content{
+                height: 80%;
+                width: 100%;
+
+                display: flex;
+                background-color: rgb(27, 147, 184);
+            }
+
 
 
 .footer {
