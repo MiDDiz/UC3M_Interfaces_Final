@@ -6,9 +6,8 @@ html{
     height: 100%;
     min-height: 100%;
     font-family:Arial, Helvetica, sans-serif;
-    background: #0E141B; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0E141B, #535960); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0E141B, #373a3e); 
+    background: #FFFFFF; 
+
     /* From acc */
     color: rgba(169, 142, 213, 1);
 }
@@ -31,7 +30,7 @@ body{
     min-height: 50px;
     width: 100%;
 
-    background-color: aqua;
+    background-color: #7F39FB;
 }
 
 
@@ -44,7 +43,7 @@ body{
 
 
 .footer {
-    background-color: #7617a1;
+    background-color: #985EFF;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -57,6 +56,6 @@ body{
 .footer-msg{
     margin: auto;
     text-align: center;
-    color: #a98ed5;
+    color: #985EFF;
     font-size: 0.95em;
 }
