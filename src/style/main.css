@@ -1,1 +1,61 @@
 /* Main css file */
+.html{
+    padding: 0;
+    display: block;
+    height: 100%;
+    min-height: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background: #0E141B; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0E141B, #535960); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0E141B, #373a3e); 
+    /* From acc */
+    color: rgba(169, 142, 213, 1);
+}
+
+
+.body{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+    /* From acc*/
+    width: inherit;
+    height: inherit;
+}
+
+
+.header{
+    height: 8%;
+    min-height: 50px;
+    width: 100%;
+
+    background-color: aqua;
+}
+
+
+.body-wraper{
+    flex:1;
+    width: 100%;
+
+    background-color: rgb(255, 0, 0);
+}
+
+
+.footer {
+    background-color: #7617a1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    margin: 0;
+    display: flex;
+}
+
+.footer-msg{
+    margin: auto;
+    text-align: center;
+    color: #a98ed5;
+    font-size: 0.95em;
+}
