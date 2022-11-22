@@ -22,6 +22,7 @@
     left: 20%;
     z-index: 1;
     display: flex;
+	flex-direction: column;
     background: #DBB2FF;
 }
 
@@ -48,7 +49,16 @@
 
         }
 
+	.separator{
+		/* Esto no deberia ponerse: */
+		position: absolute;
 
+		width: 70%;
+		height: 2px;
+		border-radius: 1px;
+		color: grey;
+		background-color: grey;
+	}
     .regsubody{
         font-family:Monospace, Monaco,sans-serif;
         position: absolute;
