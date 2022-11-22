@@ -51,7 +51,8 @@ body{
 	  }
 	  .input-search{
 		height: 1.5em;
-		width: 25em;
+		width: 25rem;
+        min-width: 6rem;
 		border-style: none;
 
 		font-size: 18px;
@@ -345,9 +346,20 @@ body{
 }
 
 @media only screen and (max-width: 768px) {
+    .input-search{
+        width: 12rem;
+    }
+    .sidebar{
+        padding: 5px;
+        width: 23%;
+    }
 
+    .content{
+        margin-left: 25%;
+        width: 75%;
+    }
+    
 }
 
 @media only screen and (max-width: 600px) {
-
 }
