@@ -31,24 +31,96 @@ body{
     width: 100%;
 
     display: flex;
-    justify-content: space-evenly;
+
 
     background-color: #7F39FB;
     z-index: 10;
 }
     .logo{
+		margin-left: 1em;
         margin-top: 4px;
+		margin-right: auto;
     }
+
+	
+	.search-box{
+
+		width: 100%;
+		height: fit-content;
+		position: relative;
+	  }
+	  .input-search{
+		height: 1.5em;
+		width: 9em;
+		border-style: none;
+
+		font-size: 18px;
+		letter-spacing: 2px;
+		outline: none;
+		border-radius: 25px;
+		transition: all .5s ease-in-out;
+		background-color: #939393;
+		padding-right: 40px;
+		color:#fff;
+	  }
+	  .input-search::placeholder{
+		color:rgba(255,255,255,.5);
+		font-size: 0.75rem;
+		letter-spacing: 2px;
+		initial-letter: 2em;
+		font-weight: 70;
+	  }
+	  .btn-search{
+		width: 3rem;
+		height: fit-content;
+		border-style: none;
+		font-size: 20px;
+		font-weight: bold;
+		outline: none;
+		cursor: pointer;
+		border-radius: 50%;
+		position: absolute;
+		right: 0px;
+		color:#ffffff ;
+		background-color:transparent;
+		pointer-events: painted;  
+	  }
+	  .btn-search:focus ~ .input-search{
+		width: 300px;
+		border-radius: 0px;
+		background-color: transparent;
+		border-bottom:1px solid rgba(255,255,255,.5);
+		transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+	  }
+	  .input-search:focus{
+		width: 300px;
+		border-radius: 0px;
+		background-color: transparent;
+		border-bottom:1px solid rgba(255,255,255,.5);
+		transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+	  }
+	  .search-box-wrapper{
+		margin-left: auto;
+		margin-right: auto;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: 'Lato' !important;
+	  }
+	
+
 
     .sign-log-in-button{
         padding: 10px;
 
+		margin-right: 1em;
         text-align: center;
         align-self: center;
 
         background: #6200EE;
         color: white;
-
+		cursor: pointer;
         box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
         border-radius: 50px;
     }
