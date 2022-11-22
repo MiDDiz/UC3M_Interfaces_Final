@@ -52,7 +52,6 @@
 	.separator{
 		/* Esto no deberia ponerse: */
 		position: absolute;
-
 		width: 70%;
 		height: 2px;
 		border-radius: 1px;
