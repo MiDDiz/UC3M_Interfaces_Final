@@ -107,14 +107,17 @@
 				</div>
 				<div class="section-content">
 					<div class="section-song">
+						<a class="round-button" onclick = "changeSong(1)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Die_For_You.png">
+							
 							<p class="title">Die For You</p>
 							<p class="artist">Garbbitz</p>	
 						</div>
 
 					</div>
 					<div class="section-song">
+						<a href="#" class="round-button"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Hong_Kong.jpg">
 							<p class="title">Hong Kong</p>
@@ -209,12 +212,28 @@
 			<br><br><br><br><br><br>
 		</div>
 	</div>
+	
 	<div class="footer">
 		<div class="footer-msg">
 			<h2>¡Bienvenido a spotifin't, registrate para no perderte nada!</h2>
 		</div>
 	</div>
+	<div class="player">
+		<div class="left">
+			<img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Portada del álbum" id="cover_art">
+		</div>
+		<div class="right">
+		   <div class="top">
+				<a class="song" id="song"></a>
+				<a class="artist" id="artist" ></a>
+			</div>
+			<div class="bottom">
+				<video controls="" _autoplay="" name="media" id="song_file"></video>
+			</div>
+		</div>
+	</div>
 	<!-- Home Page -->
 	<script src="script/index.js"></script>
+	<script src="script/music.js"></script>
 </body>
 </html>
