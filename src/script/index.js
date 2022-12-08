@@ -35,9 +35,31 @@ function is_logged() {
 	return true;
 }
 
+function return_logged_user() {
+	return localStorage.getItem("logged");
+}
+
 function switch_header_logged(){
 	$(".sign-log-in-button").hide();
 	// TODO: Mostrar el boton del usuario logeado...
+}
+
+function switch_sidebar_logged(){
+	$(".sidebar-button-notloged").hide();
+	$(".privacy-policy").hide();
+	$(".footer").hide();
+	$(".sidebar-button-loged").show();
+}	
+
+function switch_sidebar_notlogged(){
+	$(".sidebar-button-loged").hide();
+	$(".sidebar-button-notloged").show();
+	$(".privacy-policy").show();
+	$(".footer").show();
+}
+
+function log_out(){
+	localStorage.removeItem("logged");
 }
 
 function __init__() {
@@ -45,7 +67,10 @@ function __init__() {
 	hide_side_bar_on_mobile();
 	
 	/* Logica de usuario loggeado */
-	if (!is_logged())
-		return ;
+	if (!is_logged()){
+		switch_sidebar_notlogged();
+		return;
+	}
 	switch_header_logged();
+	switch_sidebar_logged();
 }
