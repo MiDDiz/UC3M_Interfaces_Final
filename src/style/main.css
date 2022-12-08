@@ -500,7 +500,7 @@ background: #DBB2FF;
 }
 input[type=text]{
     margin-top: 2%;
-    width: 70%;
+    width: 65%;
     padding: 14px 30px;
     border: none;
     border-radius: 10px;
@@ -508,7 +508,7 @@ input[type=text]{
 }
 input[type=password]{
     margin-top: 2%;
-    width: 70%;
+    width: 65%;
     padding: 14px 30px;
     border: none;
     border-radius: 10px;
