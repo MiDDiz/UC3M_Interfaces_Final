@@ -888,6 +888,20 @@ background: #DBB2FF;
     align-self: center;
     align-items: center;
 }
+
+
+.usr_img_btn img {
+	border-radius:50rem;
+	width: 10em;
+	height: 10em;
+}
+.dropdown-content{
+    transform: translate(120%, -9rem);
+}
+
+.dropdown-content button{
+    border-radius: 1rem;
+}
     
 /* -----------------------REGISTER CSS---------------------- */    
 .regbody{
