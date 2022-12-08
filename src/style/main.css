@@ -274,7 +274,41 @@ body{
 
                     background-color: #DBB2FF;
                 }
-
+                .section-song:hover{
+                    transition-duration: 500ms;
+                    opacity: 50%;
+                }
+                .round-button {
+                    box-sizing: border-box;
+                    display:block;
+                    position: absolute;
+                    width:80px;
+                    height:80px;
+                    margin-top: 2%;
+                    margin-left: 2%;
+                    padding-top: 14px;
+                    padding-left: 8px;
+                    line-height: 20px;
+                    border: 6px solid #fff;
+                    border-radius: 50%;
+                    color:#f5f5f5;
+                    text-align:center;
+                    text-decoration:none;
+                    background-color: rgba(0,0,0,0.5);
+                    font-size:20px;
+                    opacity: 0;                    font-weight:bold;
+                    transition: all 0.3s ease;
+                    float:rig;
+                }
+                .round-button:hover {
+                    background-color: rgba(0,0,0,0.8);
+                    box-shadow: 0px 0px 10px rgb(99, 99, 99);
+                    text-shadow: 0px 0px 10px rgba(99,99,99);
+                }
+                .section-song:hover > .round-button{
+                    transition-duration: 500ms;
+                    opacity: 100%;
+                }
                 .section-song2{
                     height: 240px;
                     min-width: 160px;
@@ -285,7 +319,10 @@ body{
 
                     background-color: #DBB2FF;
                 }
-
+                .section-song2:hover{
+                    transition-duration: 500ms;
+                    opacity: 50%;
+                }
                 .cover-img{
                     max-width: 100%;
                     max-height: 100%;
@@ -293,7 +330,9 @@ body{
                 }
                 .cover-img img {
                     width: 100%;
+                    display: block;
                     height: 100%;
+                    z-index: -1;
                     object-fit: cover;
                 }
                 .title{
@@ -604,7 +643,57 @@ input[type=password]{
     color: white;
     font-size: 0.95em;
 }
+.player {
+	z-index: 10;
+	position: fixed;
+	background: #233243;
+	color: #000;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 8%!important;
+	margin: 0;
+	min-height: 80px;
+	max-height: 80px;
+	display: flex;
+	flex-direction: row;
+}
+.player .left {
+	width: 80px;
+	background-size: cover;
+}
+.player .left img {
+	width: 80px;
+	height: 80px;
+}
+.player .right {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+.player .right .top {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 10px;
+}
+.player .right .top .song {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+.player .right .bottom {
+	display: flex;
+}
+.player .right .bottom video {
+	flex-grow: 1;
+	height: 32px;
+}
 
+.player a {
+	color: #a98ed5;
+	text-decoration: none;
+}
 @media only screen and (max-width: 2560px) {
     .sidebar{
         display: flex;
