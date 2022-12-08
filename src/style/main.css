@@ -470,7 +470,7 @@ background: #DBB2FF;
 
 .regtitle{
     margin-top:8%;
-    font-family:Monospace, Monaco,sans-serif;
+    font-family:"Roboto";
     width: 100%;
     height: 12%;
 }
@@ -487,7 +487,7 @@ background: #DBB2FF;
     }
 
 .regsubody{
-    font-family:Monospace, Monaco,sans-serif;
+    font-family:"Roboto";
     width: 90%;
     height: 35%;
     margin-left: 10%;
@@ -527,7 +527,7 @@ background: #DBB2FF;
         }
     
 .regbot{
-    font-family:Monospace, Monaco,sans-serif;
+    font-family:"Roboto";
     width: 100%;
     height: 30%;
     gap:30px;
@@ -553,7 +553,7 @@ flex-direction: column;
 background: #DBB2FF;
 }
 .logintitle{
-    font-family:Monospace, Monaco,sans-serif;
+    font-family:"Roboto";
     width: 100%;
     margin-top: 8%;
     color: black;
@@ -571,7 +571,7 @@ background: #DBB2FF;
         font-size: 48px;
     }
 .loginsubody{
-    font-family:Monospace, Monaco,sans-serif;
+    font-family:"Roboto";
     width: 100%;
     height: 35%;
     
@@ -597,7 +597,7 @@ background: #DBB2FF;
         border-radius: 50px;
     }
 .loginbot{
-    font-family:Monospace, Monaco,sans-serif;
+    font-family:"Roboto";
     width: 100%;
     height: 20%;
     gap:30px;
