@@ -41,7 +41,7 @@ function return_logged_user() {
 
 function switch_header_logged(){
 	$(".sign-log-in-button").hide();
-	// TODO: Mostrar el boton del usuario logeado...
+	show_user_img();
 }
 
 function dropUserMenu() {
