@@ -88,8 +88,6 @@ function __init__() {
 	hide_user_img();
 	hook_click_hide_dropdown();
 	/* Logica de usuario loggeado */
-	if (!is_logged())
-		return ;
 	show_user_img();
 	if (!is_logged()){
 		switch_sidebar_notlogged();
