@@ -46,12 +46,20 @@ function switch_header_logged(){
 
 function switch_sidebar_logged(){
 	$(".sidebar-button-notloged").hide();
+	$(".privacy-policy").hide();
+	$(".footer").hide();
 	$(".sidebar-button-loged").show();
-}
+}	
 
 function switch_sidebar_notlogged(){
 	$(".sidebar-button-loged").hide();
 	$(".sidebar-button-notloged").show();
+	$(".privacy-policy").show();
+	$(".footer").show();
+}
+
+function log_out(){
+	localStorage.removeItem("logged");
 }
 
 function __init__() {
@@ -61,7 +69,7 @@ function __init__() {
 	/* Logica de usuario loggeado */
 	if (!is_logged()){
 		switch_sidebar_notlogged();
-		return
+		return;
 	}
 	switch_header_logged();
 	switch_sidebar_logged();
