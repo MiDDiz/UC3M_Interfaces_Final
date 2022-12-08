@@ -36,7 +36,14 @@ body{
     background-color: #7F39FB;
     z-index: 10;
 }
+    .mobile-sidebar{
+        display: none;
+    }
+
+
     .logo{
+        display:flex ;
+        align-self: center;
 		margin-left: 1em;
         margin-top: 4px;
 		margin-right: auto;
@@ -231,6 +238,9 @@ body{
             background-color: aquamarine;
         }
 
+            .section-space{
+                display: none;
+            }
 
             .section-title{
                 height: auto;
@@ -264,6 +274,18 @@ body{
 
                     background-color: rgb(58, 184, 27);
                 }
+
+                .section-song2{
+                    height: 240px;
+                    min-width: 160px;
+                    width: 160px;
+
+                    margin: 5px;
+                    margin-right: 10px;
+
+                    background-color: rgb(58, 184, 27);
+                }
+
 
 
                 .section-plus{
@@ -560,4 +582,52 @@ input[type=password]{
 }
 
 @media only screen and (max-width: 600px) {
+
+.header{
+    height: 80px;
+}   
+
+.section-space{
+    display: block;
+}
+
+.sidebar{
+    display: none;
+}
+.content{
+    width: 100%;
+    margin-left: 0%;
+}
+
+.section-title{
+    font-size: 40px;
+
+}
+.section-song{
+    height: 180px;
+    min-width: 120px;
+    width: 120px;
+}
+.section-song2{
+    display: none;
+}
+
+.search-box-wrapper{
+    display: none;
+}
+
+.mobile-sidebar{
+    display: block;
+    height: 50px;
+    width: 50px;
+
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+    
+    
+
 }
