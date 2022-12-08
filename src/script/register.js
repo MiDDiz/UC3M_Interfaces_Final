@@ -6,11 +6,12 @@ __init__();
 function check_for_logged_user(){
 	/* If user is already logged -> Redirect */
 	if (localStorage.getItem("logged") != null) {
-		document.location.href = "../index.html";
+		document.location.href = "./index.html";
 	}
 }
 
 function get_all_reg_data() {
+	var regData;
 	regData = {
 		email: $("#reg_email").val(),
 		username: $("#reg_username").val(),
@@ -65,6 +66,7 @@ function register_user(newUser) {
 
 function log_user(newUser) {
 	localStorage.setItem("logged", newUser.username);
+	openPage("./index.html");
 }
 
 function openPage(site) {
@@ -75,6 +77,7 @@ function __init__() {
 	check_for_logged_user();
 	/* Un register clcik, check for correct registration form, then check for register user, then register user*/
 	$(".regbutton").click(() => {
+		var regData;
 		if (!check_terms_conditions())
 			return ;
 		regData = get_all_reg_data();
@@ -85,7 +88,6 @@ function __init__() {
 		/* All checks done -> register user*/
 		register_user(newUser);
 		log_user(newUser);
-		openPage("index.html");
 	});
 	
 }

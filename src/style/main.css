@@ -302,8 +302,6 @@ body{
                     margin-bottom: 0px;
                     
                 }
-<<<<<<< HEAD
-=======
 
                 .section-song2{
                     height: 240px;
@@ -318,7 +316,6 @@ body{
 
 
 
->>>>>>> fd16ced0d0b4dc50e78a0f42cb13424cb892aa85
                 .section-plus{
                     height: 80px;
                     width: 80px;
@@ -510,11 +507,7 @@ background: #DBB2FF;
         color:white;
         width: 20%;
         height: 10px;
-<<<<<<< HEAD
-        margin-left: 35%;
-=======
         margin-left: 40%;
->>>>>>> fd16ced0d0b4dc50e78a0f42cb13424cb892aa85
         background: #6200EE;
         border-radius: 50px;
     }
