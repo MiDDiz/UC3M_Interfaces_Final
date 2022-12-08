@@ -28,10 +28,14 @@
 				<input id="reg_username" type = "text" placeholder="Nombre de usuario">
 				<input id="reg_passwd"type = "password" placeholder="Contraseña">
 				<div class="regbox">
-					<p>Fecha de nacimiento</p>
-					<input id="reg_date" type = "date">          
-					<p>Foto de perfil</p>
-					<input id="reg_img" type="file" accept="image/*">
+					<div class="reg_regbox_div">
+						<p>Fecha de nacimiento</p>
+						<input id="reg_date" type = "date">
+					</div>
+					<div class="reg_regbox_div">        
+						<p>Foto de perfil</p>
+						<input id="reg_img" type="file" accept="image/*">
+					</div>  
 				</div>
 				<input type="checkbox" id="TyC" name="TyC">
                 <label for="TyC">He leído y acepto los términos y condiciones*</label>
@@ -40,6 +44,7 @@
 			</div>
 			<div class="regbutton"><p>Registrarte</p></div>	
 		</div>
+		<br> 
 		<div class="separator"></div>
         <div class= "regbot">
 			<div class="googlebutton"><p>Iniciar sesión con Google</p></div>

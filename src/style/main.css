@@ -418,7 +418,7 @@ background: #DBB2FF;
     margin-left: 10%;
 }
     .regbutton{
-        margin-top: 10px;
+        margin-top: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -428,11 +428,11 @@ background: #DBB2FF;
         width: 20%;
         height: 10px;
         margin-left: 35%;
+        margin-bottom: 5px;
         background: #6200EE;
         border-radius: 50px;
     }
     .regbox{
-        margin-left: -7%;
         margin-top: 10px;
         gap:30px;
         justify-content: center;
@@ -440,6 +440,15 @@ background: #DBB2FF;
         display:flex;
         flex-direction: row;
     }
+        .reg_regbox_div{
+            margin-right: 10px;
+            margin-top: 10px;
+            gap:10px;
+            justify-content: center;
+            align-items: center;
+            display:flex;
+            flex-direction: row;
+        }
     
 .regbot{
     font-family:Monospace, Monaco,sans-serif;
@@ -598,6 +607,9 @@ input[type=password]{
 
 }  
 
+/* ---------------------------------------------------------------------- */
+/* -----------------------------TABLET DISPLAY--------------------------- */
+/* ---------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
     .input-search{
         width: 12rem;
@@ -611,11 +623,32 @@ input[type=password]{
         margin-left: 25%;
         width: 75%;
     }
+
+/* -----------------------REGISTER CSS---------------------- */    
+    .regbody{
+        width: 80%;
+        margin-left: 10%;
+    }
     
+
+    .regbox{
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        margin-top: 0;
+    }
+    .regsubody{
+        margin-bottom: 30px;
+    }
+
 }
 
-@media only screen and (max-width: 600px) {
 
+/* ---------------------------------------------------------------------- */
+/* -----------------------------MOBILE DISPLAY--------------------------- */
+/* ---------------------------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+/* -----------------------INDEX CSS---------------------- */
 .header{
     height: 80px;
 }   
@@ -662,6 +695,10 @@ input[type=password]{
     align-items: center;
 }
     
-    
+/* -----------------------REGISTER CSS---------------------- */    
+.regbody{
+width: 80%;
+margin-left: 10%;
+}
 
 }
