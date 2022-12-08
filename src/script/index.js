@@ -44,6 +44,30 @@ function switch_header_logged(){
 	// TODO: Mostrar el boton del usuario logeado...
 }
 
+function dropUserMenu() {
+	$("#myDropdown").show();
+}
+
+function hook_click_hide_dropdown(){
+	window.onclick = function(event) {
+		if (!event.target.matches('.usr_img')) {
+			$("#myDropdown").hide();
+		}
+	} 
+}
+
+function log_out(){
+    localStorage.removeItem("logged");
+	openPage("./index.html")
+}
+
+function hide_user_img() {
+	$("#cred_bar").hide();
+}
+
+function show_user_img(){
+	$("#cred_bar").show();
+}
 function switch_sidebar_logged(){
 	$(".sidebar-button-notloged").hide();
 	$(".privacy-policy").hide();
@@ -58,14 +82,11 @@ function switch_sidebar_notlogged(){
 	$(".footer").show();
 }
 
-function log_out(){
-	localStorage.removeItem("logged");
-}
-
 function __init__() {
 	/* Lógica global*/
 	hide_side_bar_on_mobile();
-	
+	hide_user_img();
+	hook_click_hide_dropdown();
 	/* Logica de usuario loggeado */
 	if (!is_logged()){
 		switch_sidebar_notlogged();
