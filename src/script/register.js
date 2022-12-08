@@ -30,38 +30,62 @@ function validate_user(user){
 	switch (user.validate()) {
 		case -1:
 			throw_dialog("No puedes dejar campos obligatorios vacios!");
-			break;
+			return false;
 		case -2:
 			throw_dialog("El email tiene que tener la forma de: correo@servicio.dominio");
-			break;
+			return false;
 		case -3:
 			throw_dialog("Este nombre de usuario no está disponible!\nNombre de usuario no permitido.");
-			break;
+			return false;
 		case -4:
 			throw_dialog("La contraseña tiene un formato incorrecto!\nDebe tener MAXIMO 8 carácteres e incluir solo letras y dígitos!");
-			break;
+			return false;
 		case -5:
 			throw_dialog("Este correo ya está utilizado!");
-			break;
+			return false;
 		case -6:
 			throw_dialog("Este nombre de usuario no está disponible!\nUsuario ya resgistrado.");
-			break ;
+			return false;
 		default:
 			break;
 	}
-		return ;
+		return true;
 }
 
+function check_terms_conditions(){
+	if ($("#TyC").is(":checked"))
+		return true;
+	throw_dialog("Debes aceptar los terminos y condiciones.");
+	return false;
+}
+
+function register_user(newUser) {
+	localStorage.setItem(newUser.username, JSON.stringify(newUser));
+}
+
+function log_user(newUser) {
+	localStorage.setItem("logged", newUser.username);
+}
+
+function openPage(site) {
+    document.location.href = site;
+}
 
 function __init__() {
 	check_for_logged_user();
 	/* Un register clcik, check for correct registration form, then check for register user, then register user*/
 	$(".regbutton").click(() => {
+		if (!check_terms_conditions())
+			return ;
 		regData = get_all_reg_data();
 		newUser = new UserData();
 		newUser.populateForm(regData);
-		validate_user(newUser);
-		console.log(newUser);
+		if (!validate_user(newUser))
+			return ;
+		/* All checks done -> register user*/
+		register_user(newUser);
+		log_user(newUser);
+		openPage("index.html");
 	});
-
+	
 }
