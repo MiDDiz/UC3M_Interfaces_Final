@@ -1,0 +1,204 @@
+/* Main css file */
+html{
+    padding: 0;
+    display: block;
+	
+    height: 100%;
+    min-height: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background: #FFFFFF; 
+
+    /* From acc */
+    color: rgba(169, 142, 213, 1);
+
+	--playlist-margin: 10%
+}
+
+
+body{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    /* From acc*/
+    width: inherit;
+    height: inherit;
+}
+
+
+.header{
+    height: 8%;
+    min-height: 50px;
+    width: 100%;
+
+    background-color: #7F39FB;
+}
+
+
+.body-wraper {
+	/* Tamaño del header - tamaño del footer*/
+	display: flex;
+	height: calc(92% - 80px);
+    background-color: rgb(255, 255, 255);
+	width: 100%;
+}
+
+
+.footer {
+    background-color: #985EFF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    margin: 0;
+    display: flex;
+}
+
+.footer-msg{
+    margin: auto;
+    text-align: center;
+    color: #985EFF;
+    font-size: 0.95em;
+}
+
+/* Playlist styles*/
+
+.content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.playlist-wrapper {
+	margin: 2.5%;
+	height: 95%;
+	width: 95%;
+}
+
+.playlist-title {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 2.5rem;
+	line-height: 22px;
+	width: fit-content;
+	height: fit-content;
+	/* identical to box height, or 23% */
+	color: #9747FF;
+}
+
+.playlist-element {
+	background: #FFFFFF;
+	/* 12 dp */
+	box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: row;
+	height: 3.5em;
+	align-items: center;
+	margin-bottom: 2em;
+	cursor: pointer;
+}
+.playlist-element:hover {
+	opacity: 80%;
+}
+
+.element-number {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 22px;
+
+	/* identical to box height, or 110% */
+	letter-spacing: -0.908px;
+
+	color: #000000;
+
+	opacity: 0.4;
+
+	margin-left: 1em;
+	margin-right: 2em;
+}
+.element-img{
+	max-width: 100%;
+	max-height: 100%;
+	margin-right: var(--playlist-margin);
+}
+.element-img img {
+	max-height: 3.5em;
+}
+
+
+
+.element-title {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	/* identical to box height, or 150% */
+	letter-spacing: 0.15px;
+	/* 00. On Surface / High Emphasis */
+	color: rgba(0, 0, 0, 0.87);
+	margin-right: var(--playlist-margin);
+}
+
+.element-artists {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+
+	/* identical to box height, or 143% */
+	letter-spacing: 0.25px;
+
+	color: #9747FF;
+	margin-right: var(--playlist-margin);
+}
+
+.element-time {
+	/* Body 2 */
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+
+	/* identical to box height, or 143% */
+	letter-spacing: 0.25px;
+	color: #9747FF;
+	margin-right: var(--playlist-margin);
+}
+
+.playlist-element span {
+	max-height: 100%;
+}
+
+.element-remove {
+	/* 01. Primary/50 */
+	background: #F2E7FE;
+	/* 04 dp */
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 50px;
+	height: 2em;
+	width: 2em;
+	margin-right: 1.5em;
+}
+@media only screen and (max-width: 600px) {
+		html {
+			--playlist-margin: 1em;
+		}
+		.playlist-element span {
+			font-size: 0.65em;
+				
+		}
+	}
+
+@media only screen and (max-width: 760px) {
+	.playlist-element span {
+		font-size: 0.65em;
+	}
+}
