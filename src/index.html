@@ -9,8 +9,6 @@
 	<link rel="stylesheet" href="style/main.css">
 	<!-- JQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- Home Page -->
-	<script src="script/index.js"></script>
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -18,7 +16,7 @@
 </head>
 <body>
 	<div class="header">
-		<div class="mobile-sidebar">
+		<div class="mobile-sidebar" onclick="openMobileSidebar()">
 			<i class="fa-solid fa-bars" style="color: white;"></i>
 		</div>
 		<div class="logo">
@@ -45,7 +43,7 @@
 		</div>
 	</div>
 	<div class="body-wraper">
-		<div class="sidebar">
+		<div class="sidebar" id="id-sidebar">
 			<div class="sidebar-button">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-heart" style="color: white;"></i>
@@ -97,21 +95,21 @@
 							<p class="artist">Felix Jaehn</p>	
 						</div>
 					</div>
-					<div class="section-song">
+					<div class="section-song2">
 						<div class="cover-img">
 							<img src="/src/images/Shivers.png">
 							<p class="title">Shivers</p>
 							<p class="artist">Ed Sheeran</p>	
 						</div>
 					</div>
-					<div class="section-song">
+					<div class="section-song2">
 						<div class="cover-img">
 							<img src="/src/images/In_Too_Deep.jpeg">
 							<p class="title">In Too Deep</p>
 							<p class="artist">Sum 41</p>	
 						</div>
 					</div>
-					<div class="section-song">
+					<div class="section-song2">
 						<div class="cover-img">
 							<img src="/src/images/Save_Your_Tears.jpg">
 							<p class="title">Save Your Tears</p>
@@ -149,21 +147,21 @@
 							<p class="artist">Sam Smith</p>	
 						</div>
 					</div>
-					<div class="section-song">
+					<div class="section-song2">
 						<div class="cover-img">
 							<img src="/src/images/Sunroof.jpg">
 							<p class="title">Sunroof</p>
 							<p class="artist">Nicky Youre</p>	
 						</div>
 					</div>
-					<div class="section-song">
+					<div class="section-song2">
 						<div class="cover-img">
 							<img src="/src/images/Mary_On_A_Cross.jpeg">
 							<p class="title">Mary On A Cross</p>
 							<p class="artist">Ghost</p>	
 						</div>
 					</div>
-					<div class="section-song">
+					<div class="section-song2">
 						<div class="cover-img">
 							<img src="/src/images/Entertain_Me.jpeg">
 							<p class="title">Entertain Me</p>
@@ -183,5 +181,7 @@
 			<h2>¡Bienvenido a spotifin't, registrate para no perderte nada!</h2>
 		</div>
 	</div>
+	<!-- Home Page -->
+	<script src="script/index.js"></script>
 </body>
 </html>
