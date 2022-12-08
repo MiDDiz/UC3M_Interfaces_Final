@@ -57,7 +57,7 @@ body{
 		position: relative;
 	  }
 	  .input-search{
-		height: 1.5em;
+		height: 1.5em; 
 		width: 25rem;
         min-width: 6rem;
 		border-style: none;
@@ -560,7 +560,7 @@ background: #DBB2FF;
     border-radius: 50px;
     cursor: pointer;
 }
-input[type=text]{
+.logininfo input[type=text]{
     margin-top: 2%;
     width: 65%;
     padding: 14px 30px;
@@ -568,7 +568,23 @@ input[type=text]{
     border-radius: 10px;
     cursor: text;
 }
-input[type=password]{
+.logininfo input[type=password]{
+    margin-top: 2%;
+    width: 65%;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: text;
+}
+.reginfo input[type=text]{
+    margin-top: 2%;
+    width: 65%;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: text;
+}
+.reginfo input[type=password]{
     margin-top: 2%;
     width: 65%;
     padding: 14px 30px;
