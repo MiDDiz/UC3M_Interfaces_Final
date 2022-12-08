@@ -40,12 +40,40 @@ function switch_header_logged(){
 	// TODO: Mostrar el boton del usuario logeado...
 }
 
+function dropUserMenu() {
+	$("#myDropdown").show();
+}
+
+function hook_click_hide_dropdown(){
+	window.onclick = function(event) {
+		if (!event.target.matches('.usr_img')) {
+			$("#myDropdown").hide();
+		}
+	} 
+}
+
+function log_out(){
+    localStorage.removeItem("logged");
+	openPage("../index.html")
+}
+
+function hide_user_img() {
+	$("#cred_bar").hide();
+}
+
+function show_user_img(){
+	$("#cred_bar").show();
+
+}
+
 function __init__() {
 	/* Lógica global*/
 	hide_side_bar_on_mobile();
-	
+	hide_user_img();
+	hook_click_hide_dropdown();
 	/* Logica de usuario loggeado */
 	if (!is_logged())
 		return ;
+	show_user_img();
 	switch_header_logged();
 }
