@@ -431,6 +431,7 @@ background: #DBB2FF;
         margin-bottom: 5px;
         background: #6200EE;
         border-radius: 50px;
+        cursor: pointer;
     }
     .regbox{
         margin-top: 10px;
@@ -461,6 +462,7 @@ background: #DBB2FF;
     flex-direction: row;
 
 }
+
 /* -----------------------LOGIN CSS---------------------- */
 .loginbody{
 position: fixed;
@@ -542,6 +544,7 @@ background: #DBB2FF;
     height: 10px;
     background: white;
     border-radius: 50px;
+    cursor: pointer;
 }
 .facebookbutton{
     display: flex;
@@ -554,6 +557,7 @@ background: #DBB2FF;
     color:white;
     background-color: rgb(44, 67, 115);
     border-radius: 50px;
+    cursor: pointer;
 }
 input[type=text]{
     margin-top: 2%;
@@ -561,7 +565,7 @@ input[type=text]{
     padding: 14px 30px;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: text;
 }
 input[type=password]{
     margin-top: 2%;
@@ -569,7 +573,7 @@ input[type=password]{
     padding: 14px 30px;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: text;
 }
 .separator{
     /* Esto no deberia ponerse: */
