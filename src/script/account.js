@@ -3,12 +3,14 @@ __init__();
 
 function set_acc_data(){
     requestUserDatabase = localStorage.getItem(curr_user);
-    newUser = new UserData();
-    newUser.populateFromJSON(JSON.parse(requestUserDatabase));
-    $("#acc-curr-user").text(newUser.username);
-    $("#acc-curr-email").text(newUser.email);
-    $("#acc-curr-birth").text(newUser.birthday);
-    return newUser;
+    oldUser = new UserData();
+    oldUser.populateFromJSON(JSON.parse(requestUserDatabase));
+    $("#acc-curr-user").text(oldUser.username);
+    $("#acc-curr-email").text(oldUser.email);
+    $("#acc-curr-birth").text(oldUser.birthday);
+    imgname="images/" + oldUser.usr_img;
+    $("#user-img").attr("src",imgname);
+    return oldUser;
 }
 
 function get_all_acc_data() {
@@ -17,8 +19,8 @@ function get_all_acc_data() {
 		email: $("#acc_email").val(),
 		username: $("#acc_username").val(),
 		password: $("#acc_passwd").val(),
-		date: $("#acc_date").val(),
-		img: $("#acc_img").val()
+		birthday: $("#acc_date").val(),
+		usr_img: $("#acc_img").val()
 	}
 	return accData;
 }
@@ -35,26 +37,40 @@ function check_acc_data(newUser, auxUser){
     if (auxUser.birthday != ""){
         newUser.birthday = auxUser.birthday;
     }
-    if (auxUser.img != ""){
-        newUser.img = auxUser.img;
+    if (auxUser.usr_img != ""){
+        nameimage=auxUser.usr_img.split("\\");
+    	newUser.usr_img =(nameimage[nameimage.length-1]);
     }
     return newUser;
 
 }
 function log_user(newUser) {
 	localStorage.setItem("logged", newUser.username);
-
 }
 
+function modifyimg(user){
+    imgname="images/"+user.usr_img;
+    $("#user-img").attr("src",imgname);
+}
+
+function checkuser(newUser){
+    if (curr_user != newUser.username){
+        return -1;
+    }
+    return 0;
+}
 function __init__() {
-	newUser = set_acc_data();
-	/* Un register clcik, check for correct registration form, then check for register user, then register user*/
+	oldUser = set_acc_data();
 	$(".account-change-button").click(() => {
         var auxUser = get_all_acc_data()
-        defUser = check_acc_data(newUser,auxUser);
-        log_user(defUser);
+        defUser = check_acc_data(oldUser,auxUser);
+        modifyimg(defUser)
         defUser.saveCookie();
-        /*localStorage.removeItem(curr_user.toString());*/
+        aux = checkuser(defUser);
+        if (aux == -1){
+            localStorage.removeItem(curr_user.toString());
+        }
+        log_user(defUser);
         location.reload()
 	});
 	
