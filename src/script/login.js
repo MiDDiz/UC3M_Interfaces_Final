@@ -54,5 +54,4 @@ function __init__() {
 			return ;
 		log_user(newUser);
 	});
-
 }

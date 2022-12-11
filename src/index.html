@@ -13,8 +13,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style/context-menu.css">
 </head>
 <body>
+	<!-- Home Page -->
 	<div class="header">
 		<div class="mobile-sidebar" onclick="openMobileSidebar()">
 			<i class="fa-solid fa-bars" style="color: white;"></i>
@@ -95,20 +97,12 @@
 					Canciones que te gustan
 				</div>
 			</div>
-			<div class="sidebar-button-loged">
-				<div class="sidebar-button-img">
-					<i class="fa-solid fa-plus" style="color: white;"></i>
-					</div>
-				<div class="sidebar-button-text">
-					Crear playlist
-				</div>
-			</div>
 			<div class="privacy-policy">
 				<div style="align-self: center;">Política de privacidad</div>
 			</div>
 
 		</div>
-		<div class="content">
+		<div class="content" id="main_content">
 			<div class="section-space">br</div>
 			<div class="section-space">br</div>
 			<div class="section">
@@ -117,7 +111,7 @@
 				</div>
 				<div class="section-content">
 					<div class="section-song">
-						<a class="round-button" onclick = "changeSong(1)"><i class="fa fa-play fa-2x"></i></a>
+						<a class="round-button" onclick = "changeSong(0)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Die_For_You.png">
 							
@@ -127,7 +121,7 @@
 
 					</div>
 					<div class="section-song">
-						<a href="#" class="round-button"><i class="fa fa-play fa-2x"></i></a>
+						<a class="round-button" onclick = "changeSong(1)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Hong_Kong.jpg">
 							<p class="title">Hong Kong</p>
@@ -135,6 +129,7 @@
 						</div>
 					</div>
 					<div class="section-song">
+						<a class="round-button" onclick = "changeSong(2)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Some_Say.jpg">
 							<p class="title">Some Say</p>
@@ -142,6 +137,7 @@
 						</div>
 					</div>
 					<div class="section-song2">
+						<a class="round-button" onclick = "changeSong(3)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Shivers.png">
 							<p class="title">Shivers</p>
@@ -149,6 +145,7 @@
 						</div>
 					</div>
 					<div class="section-song2">
+						<a class="round-button" onclick = "changeSong(4)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/In_Too_Deep.jpeg">
 							<p class="title">In Too Deep</p>
@@ -156,6 +153,7 @@
 						</div>
 					</div>
 					<div class="section-song2">
+						<a class="round-button" onclick = "changeSong(5)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Save_Your_Tears.jpg">
 							<p class="title">Save Your Tears</p>
@@ -173,6 +171,7 @@
 				</div>
 				<div class="section-content">
 					<div class="section-song">
+						<a class="round-button" onclick = "changeSong(6)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Malbec.jpg">
 							<p class="title">Malbec</p>
@@ -180,6 +179,7 @@
 						</div>
 					</div>
 					<div class="section-song">
+						<a class="round-button" onclick = "changeSong(7)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Miss_You.jpg">
 							<p class="title">Miss You</p>
@@ -187,6 +187,7 @@
 						</div>
 					</div>
 					<div class="section-song">
+						<a class="round-button" onclick = "changeSong(8)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Unholy.jpg">
 							<p class="title">Unholy</p>
@@ -194,6 +195,7 @@
 						</div>
 					</div>
 					<div class="section-song2">
+						<a class="round-button" onclick = "changeSong(9)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Sunroof.jpg">
 							<p class="title">Sunroof</p>
@@ -201,6 +203,7 @@
 						</div>
 					</div>
 					<div class="section-song2">
+						<a class="round-button" onclick = "changeSong(10)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Mary_On_A_Cross.jpeg">
 							<p class="title">Mary On A Cross</p>
@@ -208,6 +211,7 @@
 						</div>
 					</div>
 					<div class="section-song2">
+						<a class="round-button" onclick = "changeSong(11)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
 							<img src="/src/images/Entertain_Me.jpeg">
 							<p class="title">Entertain Me</p>
@@ -222,7 +226,6 @@
 			<br><br><br><br><br><br>
 		</div>
 	</div>
-	
 	<div class="footer">
 		<div class="footer-msg">
 			<h2>¡Bienvenido a spotifin't, registrate para no perderte nada!</h2>
@@ -230,7 +233,7 @@
 	</div>
 	<div class="player">
 		<div class="left">
-			<img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Portada del álbum" id="cover_art">
+			<img src="./images/default_music.png" alt="Portada del álbum" id="cover_art">
 		</div>
 		<div class="right">
 		   <div class="top">
@@ -242,8 +245,47 @@
 			</div>
 		</div>
 	</div>
-	<!-- Home Page -->
+
+
+	<!-- Rightclick ontext menu structure-->
+
+	<div class="ctm-wrapper">
+		<div class="ctm-content">
+		  <ul class="ctm-menu">
+			<li class="ctm-item ctm-unliked">
+				<!--Context menu item, aparece solo si el item clickado no está en me gusta-->
+				<i class="fa-solid fa-heart"></i>
+				<span>Añadir a me gusta</span>
+			</li>
+			<li class="ctm-item ctm-liked">
+			  	<!--Context menu item, aparece solo si el item clickado está en me gusta -->
+				<i class="fa-solid fa-heart-crack"></i>
+				<span>Quitar de me gusta  </span>
+			</li>
+			<li class="ctm-item ctm-playlist">
+			  	<div>
+					<i class="fa-solid fa-list"></i>
+					<span>Añadir a playlist</span>
+			  	</div>
+				<i class="ctm-play fa-solid fa-caret-right"></i>
+				<!-- Context submenu playlists-->
+				<ul class="ctm-playlist-menu">
+					<li class="ctm-item">
+						<i class="fa-solid fa-play"></i>
+						<span>Playlist name</span>
+					</li>
+				</ul>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+
+
+
 	<script src="script/index.js"></script>
 	<script src="script/music.js"></script>
+	<script src="script/news.js"></script>
+	<script src="script/userData.js"></script>
+	<script src="script/context-menu.js"></script>
 </body>
 </html>

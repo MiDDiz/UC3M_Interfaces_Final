@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spotifyn't</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="style/main.css">
+	<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="header">
+		<div class="mobile-sidebar" onclick="openMobileSidebar()">
+			<i class="fa-solid fa-bars" style="color: white;"></i>
+		</div>
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt="logo" href height="55px"></a>
+		</div>
+		<div class ="search-box-wrapper">
+			<div class="search-box">
+			  <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></i>
+
+			  </button>
+			  <input id="search-bar" type="text" class="input-search" placeholder="    Buscador...">
+			</div>
+		</div>
+		<div class="sign-log-in-button" onclick="openPage('./register.html')">
+			<div style="align-self: center;">
+				Registrarse
+			</div>
+		</div>
+		<div class="sign-log-in-button" onclick="openPage('./login.html')">
+			<div style="align-self: center;">
+				Iniciar Sesión
+			</div>
+		</div>
+		<div id="cred_bar">
+			<button class="usr_img_btn" onclick="dropUserMenu()">
+				<img class="usr_img" src="./images/miño.jpg">
+			</button>
+			<div id="myDropdown" class="dropdown-content">
+				<button onclick="openPage('account.html')">Cuenta</button>
+				<button onclick="openPage('../perfil.html')">Perfil</button>
+				<button onclick="log_out()">Cerrar Sesion</button>
+			</div>
+		</div>	
+	</div>
+	<div class="body-wraper">
+		<div class="sidebar" id="id-sidebar">
+			<div id="cred_bar_mobile">
+				<button class="usr_img_btn" onclick="dropUserMenu()">
+					<img class="usr_img" src="./images/miño.jpg">
+				</button>
+				<div id="myDropdown_mobile" class="dropdown-content">
+					<button onclick="openPage('../account.html')">Cuenta</button>
+					<button onclick="openPage('../perfil.html')">Perfil</button>
+					<button onclick="log_out()">Cerrar Sesion</button>
+				</div>
+			</div>
+			<div class="sidebar-button-notloged">
+				<div class="sidebar-button-img">
+					<i class="fa-solid fa-star" style="color: white;"></i>
+					</div>
+				<div class="sidebar-button-text" onclick="openPage('./news.html')">
+					Descubre nuevas canciones
+				</div>
+			</div>
+			<div class="sidebar-button-notloged">
+				<div class="sidebar-button-img">
+					<i class="fa-solid fa-heart" style="color: white;"></i>
+					</div>
+				<div class="sidebar-button-text">
+					Top 50 del momento
+				</div>
+			</div>
+			<div class="sidebar-button-loged">
+				<div class="sidebar-button-img">
+					<i class="fa-solid fa-layer-group" style="color: white;"></i>
+					</div>
+				<div class="sidebar-button-text">
+					Playlist creadas
+				</div>
+			</div>
+			<div class="sidebar-button-loged">
+				<div class="sidebar-button-img">
+					<i class="fa-solid fa-heart" style="color: white;"></i>
+					</div>
+				<div class="sidebar-button-text">
+					Canciones que te gustan
+				</div>
+			</div>
+			<div class="privacy-policy">
+				<div style="align-self: center;">Política de privacidad</div>
+			</div>
+
+		</div>
+		<div class="content" id="main_content">
+			<!-- Random Songs-->
+            <div class="section">
+                <div class="section-space">br</div>
+                <div class="section-space">br</div>
+				<div class="section-title">
+					Nuevos titulos que podrían interesarte
+				</div>
+                <div class="news-rand-song" id="container-rand-song">
+                    
+                </div>
+            </div>
+			<br><br><br><br><br><br>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div class="footer-msg">
+			<h2>¡Bienvenido a spotifin't, registrate para no perderte nada!</h2>
+		</div>
+	</div>
+	<div class="player">
+		<div class="left">
+			<img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Portada del álbum" id="cover_art">
+		</div>
+		<div class="right">
+		   <div class="top">
+				<a class="song" id="song"></a>
+				<a class="artist" id="artist" ></a>
+			</div>
+			<div class="bottom">
+				<video controls="" _autoplay="" name="media" id="song_file"></video>
+			</div>
+		</div>
+	</div>
+	<!-- Home Page -->
+	<script src="script/index.js"></script>
+	<script src="script/music.js"></script>
+    <script src="script/news.js"></script>
+</body>
+</html>

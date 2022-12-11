@@ -353,9 +353,33 @@ body{
                     transition-duration: 500ms;
                     opacity: 50%;
                 }
+
+                .section-song:hover > .round-button{
+                    transition-duration: 500ms;
+                    opacity: 100%;
+                }
+                .section-song2{
+                    height: 240px;
+                    min-width: 160px;
+                    width: 160px;
+                    box-shadow: 0px 1px 5px black;
+                    margin: 5px;
+                    margin-right: 10px;
+
+                    background-color: #DBB2FF;
+                }
+                .section-song2:hover{
+                    transition-duration: 500ms;
+                    opacity: 50%;
+                }
+                .section-song2:hover > .round-button{
+                    transition-duration: 500ms;
+                    opacity: 100%;
+                }
                 .round-button {
                     box-sizing: border-box;
                     display:block;
+                    cursor: pointer;
                     position: absolute;
                     width:80px;
                     height:80px;
@@ -379,24 +403,6 @@ body{
                     background-color: rgba(0,0,0,0.8);
                     box-shadow: 0px 0px 10px rgb(99, 99, 99);
                     text-shadow: 0px 0px 10px rgba(99,99,99);
-                }
-                .section-song:hover > .round-button{
-                    transition-duration: 500ms;
-                    opacity: 100%;
-                }
-                .section-song2{
-                    height: 240px;
-                    min-width: 160px;
-                    width: 160px;
-                    box-shadow: 0px 1px 5px black;
-                    margin: 5px;
-                    margin-right: 10px;
-
-                    background-color: #DBB2FF;
-                }
-                .section-song2:hover{
-                    transition-duration: 500ms;
-                    opacity: 50%;
                 }
                 .cover-img{
                     max-width: 100%;
@@ -733,7 +739,6 @@ background: #DBB2FF;
         font-size: 40px;
         text-align: center;
     }
-
     .account-image{
         text-align: center;
         width: 100%;
@@ -828,7 +833,7 @@ background: #DBB2FF;
 .player {
 	z-index: 10;
 	position: fixed;
-	background: #233243;
+	background: #985EFF;
 	color: #000;
 	bottom: 0;
 	left: 0;
@@ -873,7 +878,7 @@ background: #DBB2FF;
 }
 
 .player a {
-	color: #a98ed5;
+	color: black;
 	text-decoration: none;
 }
 @media only screen and (max-width: 2560px) {

@@ -9,13 +9,17 @@ function openPage(site) {
 
 function openMobileSidebar() {
     let sidebar = $('#id-sidebar');
+	let content = $('#main_content');
     if (is_sidebar_on==0){
         is_sidebar_on=1;
         sidebar.show("100");
+		content.hide();
+
     }
     else if (is_sidebar_on==1){
         is_sidebar_on=0;
         sidebar.hide();
+		content.show();
     }
     
 }
@@ -73,7 +77,6 @@ function show_user_img(){
 	$("#cred_bar").show();
 }
 function switch_sidebar_logged(){
-	$(".sidebar-button-notloged").hide();
 	$(".privacy-policy").hide();
 	$(".footer").hide();
 	$(".sidebar-button-loged").show();
