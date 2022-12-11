@@ -123,11 +123,58 @@ function hook_sidebar_buttons(){
 	});
 }
 
+/* Search bar logic */
+function startSearch(){
+	// Get input
+	var querry = $("#search-bar").val();
+	// If empty querry return site to normal:
+	if (querry== "")
+		location.reload();
+	// Store as last querry
+
+
+	// Get all matching songs
+	var songs = SongMaster.find(querry);
+	console.log(songs);
+	// Clear DOM.
+	console.log(songs);
+	$("#main_content").html("<div class='section'> </div>");
+	// Append elements Fount
+	$(".section").append(`
+		<div class="section-title">Resultados</div>
+		<div class="section-content"></div>
+	`)
+	songs.forEach(song => {
+		$(".section-content").append(`
+			<div class="section-song">
+				<a class="round-button" onclick = "staticChangeSong('${song.cover}', '${song.title}', '${song.artist}', '${song.path}'$)">
+					<i class="fa fa-play fa-2x"></i>
+				</a>
+				<div class="cover-img">
+					<img src=${song.cover}>
+					<p class="title">${song.title}</p>
+					<p class="artist">${song.artist}</p>	
+				</div>
+			</div>
+		`)
+	});
+	$(".covers").append(`
+				<div class="footer-padding"></div>
+				<div class="footer-padding"></div>
+				<div class="footer-padding"></div>
+							`);
+}
+
+
+
 function __init__() {
 	/* Lógica global*/
 	hide_side_bar_on_mobile();
 	hide_user_img();
 	hook_click_hide_dropdown();
+	$("#search-bar").keyup(() => {
+		startSearch();
+	})
 	/* Logica de usuario loggeado */
 	if (!is_logged()){
 		switch_sidebar_notlogged();
@@ -137,4 +184,5 @@ function __init__() {
 	switch_header_logged_mobile();
 	switch_sidebar_logged();
 	hook_sidebar_buttons();
+	
 }

@@ -35,7 +35,7 @@ function generatePlaylist(songArray) {
 		$(".playlist-content").append(`
 			<div class="playlist-element" onclick="staticChangeSong('${song.cover}',
 																	  '${song.title}',
-																	  '${song.artgist}',
+																	  '${song.artist}',
 																	  '${song.path}')">
 				<span class="element-number">${count}</span>
 				<div class="element-img">
