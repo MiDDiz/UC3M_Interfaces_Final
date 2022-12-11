@@ -54,20 +54,20 @@ class SongHandler{
 
 var SongMaster = new SongHandler([
 	//Tendencias Songs
-	new Song("../audios/Die_For_You.mp3", "Die For You", "Garbbitz", "../images/Die_For_You.png"),
-	new Song("../audios/Hong_Kong.mp3", "Hong Kong", "C. Tangana","../images/Hong_Kong.jpg"),
-	new Song("../audios/Some_Say.mp3", "Some Say", "Felix Jaehn","../images/Some_Say.jpg"),
-	new Song("../audios/Shivers.mp3", "Shivers", "Ed Sheeran","../images/Shivers.png"),
-	new Song("../audios/In_Too_Deep.mp3", "In Too Deep", "Sum 41","../images/In_Too_Deep.jpeg"),
-	new Song("../audios/Save_Your_Tears.mp3", "Save Your Tears", "The Weeknd","../images/Save_Your_Tears.jpg"),
+	new Song("./audios/Die_For_You.mp3", "Die For You", "Garbbitz", "./images/Die_For_You.png"),
+	new Song("./audios/Hong_Kong.mp3", "Hong Kong", "C. Tangana","./images/Hong_Kong.jpg"),
+	new Song("./audios/Some_Say.mp3", "Some Say", "Felix Jaehn","./images/Some_Say.jpg"),
+	new Song("./audios/Shivers.mp3", "Shivers", "Ed Sheeran","./images/Shivers.png"),
+	new Song("./audios/In_Too_Deep.mp3", "In Too Deep", "Sum 41","./images/In_Too_Deep.jpeg"),
+	new Song("./audios/Save_Your_Tears.mp3", "Save Your Tears", "The Weeknd","./images/Save_Your_Tears.jpg"),
 	
 	//Recomendaciones Songs
-	new Song("../audios/Malbec.mp3", "Malbec", "Duki & Bzrp", "../images/Malbec.jpg"),
-	new Song("../audios/Miss_You.mp3", "Miss You", "Oliver Tree","../images/Miss_You.jpg"),
-	new Song("../audios/Unholy.mp3", "Unholy", "Sam Smith","../images/Unholy.jpg"),
-	new Song("../audios/Sunroof.mp3", "Sunroof", "Nicky Youre","../images/Sunroof.jpg"),
-	new Song("../audios/Mary_On_A_Cross.mp3", "Mary On A Cross", "Ghost","../images/Mary_On_A_Cross.jpeg"),
-	new Song("../audios/Entertain_Me.mp3", "Entertain Me", "Ylona Garcia","../images/Entertain_Me.jpeg")
+	new Song("./audios/Malbec.mp3", "Malbec", "Duki & Bzrp", "./images/Malbec.jpg"),
+	new Song("./audios/Miss_You.mp3", "Miss You", "Oliver Tree","./images/Miss_You.jpg"),
+	new Song("./audios/Unholy.mp3", "Unholy", "Sam Smith","./images/Unholy.jpg"),
+	new Song("./audios/Sunroof.mp3", "Sunroof", "Nicky Youre","./images/Sunroof.jpg"),
+	new Song("./audios/Mary_On_A_Cross.mp3", "Mary On A Cross", "Ghost","./images/Mary_On_A_Cross.jpeg"),
+	new Song("./audios/Entertain_Me.mp3", "Entertain Me", "Ylona Garcia","./images/Entertain_Me.jpeg")
 ]);
 
 function changeSong(n) {
