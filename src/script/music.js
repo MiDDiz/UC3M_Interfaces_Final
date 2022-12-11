@@ -70,11 +70,11 @@ var SongMaster = new SongHandler([
 	new Song("./audios/Entertain_Me.mp3", "Entertain Me", "Ylona Garcia","./images/Entertain_Me.jpeg"),
 
 	//Other songs
-	new Song("./audios/All_star.mp3", "All Star", "Smash Mouth", "./images/All_star.mp3"),
+	new Song("./audios/All_star.mp3", "All Star", "Smash Mouth", "./images/All_Star.jpg"),
 	new Song("./audios/Ave_Maria.mp3", "Ave María", "David Bisbal", "./images/Ave_Maria.jpg"),
 	new Song("./audios/Bones.mp3", "Bones", "Imagine Dragons", "./images/Bones.jpg"),
 	new Song("./audios/Ingobernable.mp3", "Ingobernable", "C.Tangana", "./images/Ingobernable.jpg"),
-	new Song("./audios/Never_going_to_give_you_up.mp3", "Never going to give you up", "Rick Astley", "./images/Never_going_to_give_you_up.jpg"),
+	new Song("./audios/Never_gonna_give_you_up.mp3", "Never going to give you up", "Rick Astley", "./images/Never_gonna_give_you_up.jpg"),
 	new Song("./audios/Titi_me_pregunto.mp3", "Tití Me Preguntó", "Bad Bunny", "./images/Titi_me_pregunto.jpg"),
 	new Song("./audios/Torero.mp3", "Torero", "Chayanne", "./images/Torero.jpg"),
 	new Song("./audios/Wavin_Flag.mp3", "Wavin' Flag", "K'naan & Bisbal", "./images/Wavin_Flag.jpg")
