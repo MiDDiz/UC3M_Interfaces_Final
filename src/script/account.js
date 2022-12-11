@@ -54,7 +54,7 @@ function __init__() {
         defUser = check_acc_data(newUser,auxUser);
         log_user(defUser);
         defUser.saveCookie();
-        localStorage.removeItem(curr_user.toString());
+        /*localStorage.removeItem(curr_user.toString());*/
         location.reload()
 	});
 	
