@@ -13,8 +13,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style/context-menu.css">
 </head>
 <body>
+	<!-- Home Page -->
 	<div class="header">
 		<div class="mobile-sidebar" onclick="openMobileSidebar()">
 			<i class="fa-solid fa-bars" style="color: white;"></i>
@@ -222,7 +224,6 @@
 			<br><br><br><br><br><br>
 		</div>
 	</div>
-	
 	<div class="footer">
 		<div class="footer-msg">
 			<h2>¡Bienvenido a spotifin't, registrate para no perderte nada!</h2>
@@ -242,8 +243,45 @@
 			</div>
 		</div>
 	</div>
-	<!-- Home Page -->
+
+
+	<!-- Rightclick ontext menu structure-->
+
+	<div class="ctm-wrapper">
+		<div class="ctm-content">
+		  <ul class="ctm-menu">
+			<li class="ctm-item ctm-unliked">
+				<!--Context menu item, aparece solo si el item clickado no está en me gusta-->
+				<i class="fa-solid fa-heart"></i>
+				<span>Añadir a me gusta</span>
+			</li>
+			<li class="ctm-item ctm-liked">
+			  	<!--Context menu item, aparece solo si el item clickado está en me gusta -->
+				<i class="fa-solid fa-heart-crack"></i>
+				<span>Quitar de me gusta  </span>
+			</li>
+			<li class="ctm-item ctm-playlist">
+			  	<div>
+					<i class="fa-solid fa-list"></i>
+					<span>Añadir a playlist</span>
+			  	</div>
+				<i class="ctm-play fa-solid fa-caret-right"></i>
+				<!-- Context submenu playlists-->
+				<ul class="ctm-playlist-menu">
+					<li class="ctm-item">
+						<i class="fa-solid fa-play"></i>
+						<span>Playlist name</span>
+					</li>
+				</ul>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+
+
+
 	<script src="script/index.js"></script>
 	<script src="script/music.js"></script>
+	<script src="script/context-menu.js"></script>
 </body>
 </html>
