@@ -77,7 +77,6 @@ function show_user_img(){
 	$("#cred_bar").show();
 }
 function switch_sidebar_logged(){
-	$(".sidebar-button-notloged").hide();
 	$(".privacy-policy").hide();
 	$(".footer").hide();
 	$(".sidebar-button-loged").show();
