@@ -90,6 +90,8 @@ function hide_user_img() {
 }
 
 function show_user_img(){
+	let imgname = get_image();
+	$("#main-image").attr("src",imgname);
 	$("#cred_bar").show();
 }
 function switch_sidebar_logged(){
@@ -167,6 +169,70 @@ function startSearch(){
 
 
 
+/* Search bar logic */
+function startSearch(){
+	// Get input
+	var querry = $("#search-bar").val();
+	// If empty querry return site to normal:
+	if (querry== "")
+		location.reload();
+	// Store as last querry
+
+
+	// Get all matching songs
+	var songs = SongMaster.find(querry);
+	console.log(songs);
+	// Clear DOM.
+	console.log(songs);
+	$("#main_content").html("<div class='section'> </div>");
+	// Append elements Fount
+	$(".section").append(`
+		<div class="section-title">Resultados</div>
+		<div class="section-content"></div>
+	`)
+	songs.forEach(song => {
+		$(".section-content").append(`
+			<div class="section-song">
+				<a class="round-button" onclick = "staticChangeSong('${song.cover}', '${song.title}', '${song.artist}', '${song.path}'$)">
+					<i class="fa fa-play fa-2x"></i>
+				</a>
+				<div class="cover-img">
+					<img src=${song.cover}>
+					<p class="title">${song.title}</p>
+					<p class="artist">${song.artist}</p>	
+				</div>
+			</div>
+		`)
+	});
+
+}
+
+
+
+function hook_sidebar_buttons(){
+	$("#liked-songs").click(() => {
+		handler = new HandlerPlaylist();
+		handler.is_liked = true;
+		handler.setStorage();
+		openPage("./playlist.html");
+	});
+}
+
+function get_image(){
+	var curr_user = localStorage.getItem("logged");
+	requestUserDatabase = localStorage.getItem(curr_user);
+	newUser = new UserData();
+	newUser.populateFromJSON(JSON.parse(requestUserDatabase));
+	img = newUser.usr_img;
+	if (img == ""){
+		return ("images/miño.jpg")
+	}
+	else{
+		nameimage=img.split("\\");
+    	return("images/"+nameimage[nameimage.length-1]);
+	}
+	
+}
 function __init__() {
 	/* Lógica global*/
 	hide_side_bar_on_mobile();
