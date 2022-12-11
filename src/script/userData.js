@@ -37,6 +37,16 @@ class UserData {
 		this.saveCookie();
 	}
 
+	removeSong(song_to_remove) {
+		let newLikedSongs = []
+		this.liked_songs.forEach((elem) => {
+			if (elem.title != song_to_remove.title)
+				newLikedSongs.push(elem);
+		});
+		console.log(newLikedSongs);
+		this.liked_songs = newLikedSongs;
+	}
+
 	saveCookie(){
 		localStorage.setItem(this.username, JSON.stringify(this));
 	}
