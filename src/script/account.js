@@ -1,8 +1,7 @@
-var changedUser;
+var curr_user = localStorage.getItem("logged");
 __init__();
 
 function set_acc_data(){
-    var curr_user = localStorage.getItem("logged");
     requestUserDatabase = localStorage.getItem(curr_user);
     newUser = new UserData();
     newUser.populateFromJSON(JSON.parse(requestUserDatabase));
@@ -24,35 +23,39 @@ function get_all_acc_data() {
 	return accData;
 }
 function check_acc_data(newUser, auxUser){
-    alert(auxUser.username + "45")
-    alert(newUser.username + "sdf5")
-    if (auxUser.username != null){
+    if (auxUser.username != ""){
         newUser.username = auxUser.username;
     }
-    if (auxUser.password != null){
+    if (auxUser.password != ""){
         newUser.password = auxUser.password;
     }
-    if (auxUser.email != null){
+    if (auxUser.email != ""){
         newUser.email = auxUser.email;
     }
-    if (auxUser.birthday != null){
+    if (auxUser.birthday != ""){
         newUser.birthday = auxUser.birthday;
     }
-    if (auxUser.img != null){
+    if (auxUser.img != ""){
         newUser.img = auxUser.img;
     }
     return newUser;
 
 }
+function log_user(newUser) {
+	localStorage.setItem("logged", newUser.username);
+
+}
 
 function __init__() {
 	newUser = set_acc_data();
-    alert(newUser.username + "2")
 	/* Un register clcik, check for correct registration form, then check for register user, then register user*/
 	$(".account-change-button").click(() => {
         var auxUser = get_all_acc_data()
         defUser = check_acc_data(newUser,auxUser);
-        alert(defUser.username + "30");
+        log_user(defUser);
+        defUser.saveCookie();
+        localStorage.removeItem(curr_user.toString());
+        location.reload()
 	});
 	
 }
