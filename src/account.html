@@ -73,9 +73,41 @@
 		</div>
         <div class="account-content">
                 <div class="account-title">Ajustes de Cuenta </div>
-                <div class="account-data">
-                    a
+				<div class="account-image">
+					<img class="account-img" src="./images/miño.jpg">
+					<div class="account-image-button"><input id="acc_img" type="file" accept="image/*"></div>
+				</div>
+                <div class="account-container">
+                    <div class="account-data">
+						<div class="account-field">
+							<label>Nombre de usuario : </label><label id="acc-curr-user">nombre</label> 
+							<br>
+							<input id="acc_username" type = "text" placeholder="Nuevo nombre de usuario">
+
+						</div>
+						<br>
+						<div class="account-field">
+							<label>Contraseña : </label>
+							<br>
+							<input id="acc_passwd"type = "password" placeholder="Contraseña">
+						</div>
+					</div>
+					<div class="account-data">
+						<div class="account-field">
+							<label>Email : </label><label id="acc-curr-email">correo</label> 
+							<br>
+							<input id="acc_email" type = "text" placeholder="Nuevo email">
+
+						</div>
+						<br>
+						<div class="account-field">
+							<label>Fecha de nacimiento : </label><label id="acc-curr-birth">birthday</label> 
+							<br>
+							<input id="reg_date" type = "date">
+						</div>
+					</div>
                 </div>
+				<div class="account-change-button">Cambiar datos</div>
         </div>
 
     </div>
