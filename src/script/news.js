@@ -9,7 +9,7 @@ function __init__() {
     for (let song = 0; song < song_numb_list.length; song++){
         let newsong = getElems(song_numb_list[song])
         $(".news-rand-song").append(`
-            <div class="section-song">
+            <div class="rand-song">
                 <a class="round-button" onclick = "changeSong(${song_numb_list[song]})"><i class="fa fa-play fa-2x"></i></a>
                 <div class="cover-img">
                     <img src= ${newsong.cover}>
