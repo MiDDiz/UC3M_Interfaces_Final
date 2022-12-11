@@ -44,14 +44,17 @@ function switch_header_logged(){
 	show_user_img();
 }
 
+
 function dropUserMenu() {
 	$("#myDropdown").show();
+	$("#myDropdown_mobile").show();
 }
 
 function hook_click_hide_dropdown(){
 	window.onclick = function(event) {
 		if (!event.target.matches('.usr_img')) {
 			$("#myDropdown").hide();
+			$("#myDropdown_mobile").hide();
 		}
 	} 
 }
@@ -63,6 +66,7 @@ function log_out(){
 
 function hide_user_img() {
 	$("#cred_bar").hide();
+	$("#cred_bar_mobile").hide();
 }
 
 function show_user_img(){
@@ -74,6 +78,15 @@ function switch_sidebar_logged(){
 	$(".footer").hide();
 	$(".sidebar-button-loged").show();
 }	
+
+function switch_header_logged_mobile(){
+	let scr_width = screen.width;
+
+	if (scr_width <= "600") {
+		$("#cred_bar").hide()
+		$("#cred_bar_mobile").show()
+	}
+}
 
 function switch_sidebar_notlogged(){
 	$(".sidebar-button-loged").hide();
@@ -93,5 +106,6 @@ function __init__() {
 		return;
 	}
 	switch_header_logged();
+	switch_header_logged_mobile();
 	switch_sidebar_logged();
 }
