@@ -74,6 +74,8 @@ function hide_user_img() {
 }
 
 function show_user_img(){
+	let imgname = get_image();
+	$("#main-image").attr("src",imgname);
 	$("#cred_bar").show();
 }
 function switch_sidebar_logged(){
@@ -98,6 +100,21 @@ function switch_sidebar_notlogged(){
 	$(".footer").show();
 }
 
+function get_image(){
+	var curr_user = localStorage.getItem("logged");
+	requestUserDatabase = localStorage.getItem(curr_user);
+	newUser = new UserData();
+	newUser.populateFromJSON(JSON.parse(requestUserDatabase));
+	img = newUser.usr_img;
+	if (img == ""){
+		return ("images/miño.jpg")
+	}
+	else{
+		nameimage=img.split("\\");
+    	return("images/"+nameimage[nameimage.length-1]);
+	}
+	
+}
 function __init__() {
 	/* Lógica global*/
 	hide_side_bar_on_mobile();
