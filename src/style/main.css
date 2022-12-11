@@ -713,7 +713,6 @@ background: #DBB2FF;
     cursor: text;
 }
 .separator{
-    /* Esto no deberia ponerse: */
     width: 70%;
     height: 1.5px;
     margin-top: 5px;
@@ -724,7 +723,6 @@ background: #DBB2FF;
 /* -----------------------ACCOUNT CSS---------------------- */
 .account-content{
     color: #000;
-    position: fixed;
     font-family: "Roboto";
     width: 80%;
     margin-left: 20%;
@@ -741,61 +739,66 @@ background: #DBB2FF;
     }
     .account-image{
         text-align: center;
-        width: 100%;
-        height: 22%;
-        background-color: #6200EE;
     }
+
     .account-img{
         border-radius:20em;
-	    width: 10%;
-	    height: 80%;
+        width: 200px;
+        height: 200px;
     }
     .account-image-button{
-        margin-top: 5px;
+        margin-top: 20px;
+        margin-bottom: 10px;
         padding-left: 150px;
-    }
-    .account-container{
-        height:43%;
-        width: 100%;
-        background-color:#65d6ed;
-        display:flex;
-        flex-direction: row;
+        text-align: center;
     }
     .account-data{
         width: 50%;
+        height: 40%;
+        width: 100%;
         display:flex;
-        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
     }
+
         .account-field{
-            height: 30%;
-            margin-top: 10px;
-            margin-left: 40px;
+            height: 50%;
+            width:  35%;
+            padding: 10px;
+
+            font-size: 20px;
+            color:rgba(169, 142, 213, 1)
         }
 
     .account-change-button{
+        width: 10%;
+        height: 10px;
+        padding: 12px;
+        margin-left: auto;
+        margin-right: auto;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 12px;
+        
         color: white;
-        width: 10%;
-        height: 10px;
-        margin-left: auto;
-        margin-right: auto;
         background: #6200EE;
+        
         border-radius: 50px;
     }
 
-    .account-container input[type=text]{
+    .account-data input[type=text]{
         margin-top: 2%;
         width: 65%;
         padding: 14px 30px;
         border: none;
         border-radius: 10px;
         cursor: text;
+
+        background-color: #DBB2FF;
     }
 
-    .account-container input[type=password]{
+    .account-data input[type=password]{
         margin-top: 2%;
         color:#DBB2FF;
         width: 65%;
@@ -803,15 +806,17 @@ background: #DBB2FF;
         border: none;
         border-radius: 10px;
         cursor: text;
+        background-color: #DBB2FF;
     }
 
-    .account-container input[type=date]{
+    .account-data input[type=date]{
         margin-top: 2%;
         width: 65%;
         padding: 14px 30px;
         border: none;
         border-radius: 10px;
         cursor: text;
+        background-color: #DBB2FF;
     }
 
 /* -----------------------NEWS CSS---------------------- */
@@ -866,7 +871,7 @@ background: #DBB2FF;
         border-radius: 50px;
     }
 
-/* ----------------------- o ---------------------- */    
+/* ----------------------- Common ---------------------- */    
 .footer {
     background-color: #985EFF;
     position: fixed;
