@@ -3,6 +3,22 @@ let is_sidebar_on=0;
 
 __init__();
 
+class HandlerPlaylist {
+	constructor(is_liked) {
+		this.is_liked = is_liked;
+		this.id = null;
+	}
+	setStorage() {
+		localStorage.setItem("handler_playlists", JSON.stringify(this));
+	}
+	load() {
+		let requestHandlerDatabase = localStorage.getItem("handler_playlists");
+		let parsedRequest = JSON.parse(requestHandlerDatabase)
+		this.is_liked = parsedRequest["is_liked"];
+		this.id = parsedRequest["id"];
+	}
+}
+
 function openPage(site) {
     document.location.href = site;
 }
@@ -98,6 +114,15 @@ function switch_sidebar_notlogged(){
 	$(".footer").show();
 }
 
+function hook_sidebar_buttons(){
+	$("#liked-songs").click(() => {
+		handler = new HandlerPlaylist();
+		handler.is_liked = true;
+		handler.setStorage();
+		openPage("./playlist.html");
+	});
+}
+
 function __init__() {
 	/* Lógica global*/
 	hide_side_bar_on_mobile();
@@ -111,4 +136,5 @@ function __init__() {
 	switch_header_logged();
 	switch_header_logged_mobile();
 	switch_sidebar_logged();
+	hook_sidebar_buttons();
 }
