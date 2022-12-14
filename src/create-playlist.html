@@ -37,7 +37,7 @@
 			</button>
 			<div id="myDropdown" class="dropdown-content">
 				<button onclick="openPage('account.html')">Cuenta</button>
-				<button onclick="openPage('../perfil.html')">Perfil</button>
+				<button onclick="openPage('perfil.html')">Perfil</button>
 				<button onclick="log_out()">Cerrar Sesion</button>
 			</div>
 		</div>	
@@ -50,16 +50,16 @@
 					<img class="usr_img" src="./images/miño.jpg">
 				</button>
 				<div id="myDropdown_mobile" class="dropdown-content">
-					<button onclick="openPage('../account.html')">Cuenta</button>
-					<button onclick="openPage('../perfil.html')">Perfil</button>
+					<button onclick="openPage('account.html')">Cuenta</button>
+					<button onclick="openPage('perfil.html')">Perfil</button>
 					<button onclick="log_out()">Cerrar Sesion</button>
 				</div>
 			</div>
-			<div class="sidebar-button-notloged">
+			<div class="sidebar-button-notloged" onclick="openPage('./news.html')">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-star" style="color: white;"></i>
 					</div>
-				<div class="sidebar-button-text" onclick="openPage('./news.html')">
+				<div class="sidebar-button-text">
 					Descubre nuevas canciones
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 					Top 50 del momento
 				</div>
 			</div>
-			<div class="sidebar-button-loged">
+			<div class="sidebar-button-loged"  onclick="openPage('./allplaylist.html')">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-layer-group" style="color: white;"></i>
 					</div>
@@ -79,7 +79,7 @@
 					Playlist creadas
 				</div>
 			</div>
-			<div class="sidebar-button-loged">
+			<div class="sidebar-button-loged"  onclick="openPage('./playlist.html')">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-heart" style="color: white;"></i>
 					</div>
