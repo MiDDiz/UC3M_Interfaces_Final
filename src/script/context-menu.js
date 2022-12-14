@@ -1,7 +1,8 @@
+/* context menu dom elements */
 const contextMenu = document.querySelector(".ctm-wrapper"),
 shareMenu = contextMenu.querySelector(".ctm-playlist-menu");
 
-
+/* get song main parent of any child element */
 function get_parent(e)
 {
 	let res = e.target.closest(".section-song2")
@@ -9,7 +10,7 @@ function get_parent(e)
 		res = e.target.closest(".section-song")
 	return res;
 }
-
+/* return current logged user */
 function get_current_logged_user(){
 	current_user = localStorage.getItem("logged");
 	if (current_user == null)
@@ -20,7 +21,7 @@ function get_current_logged_user(){
 	user.populateFromJSON(JSON.parse(a));
 	return user
 }
-
+/* get song element from parent cover element */
 function getSongFromParent(parent){
 	let cover = parent.getElementsByClassName("cover-img")[0];
 	let title = cover.getElementsByClassName("title")[0];
@@ -29,7 +30,6 @@ function getSongFromParent(parent){
 
 window.addEventListener("contextmenu", e => {
 	/* Advanced context menu item generation */
-
 	/* we need to remove previous like/dislike functionality hooks */
 	$(".ctm-liked").off();
 	$(".ctm-unliked").off();
@@ -77,10 +77,13 @@ window.addEventListener("contextmenu", e => {
 		$(".ctm-noplaylists").hide();
 		$(".ctm-playlist-menu").html("");
 	}
+	/* playlist context menu item generation */
 	playlists.forEach(element => {
-		let static = new Playlist()
+		/* static element to access satic methods */
+		let static = new Playlist();
 		if (static.staticAlreadyHas(element, song)){
-			console.log(2);
+			/* If we already have the song on the playlist 
+				-> add icon and functionality to remove it */
 			$(".ctm-playlist-menu").append(`
 				<li id="playlist-${element.id}" class="ctm-item">
 					<i class="fa fa-times"></i>
@@ -88,17 +91,13 @@ window.addEventListener("contextmenu", e => {
 				</li>
 			`);
 			$(`#playlist-${element.id}`).on("click", () => {
-				console.log("Element before")
-				console.log(element)
 				element = static.staticRemoveSong(element, song);
-				console.log("Element after")
-				console.log(element)
 				user.setPlaylists(playlists);
 				user.saveCookie();
 			})
 		}
 		else {
-			console.log(1);
+			/* If we dont have it -> add icon and functionality to insert it */
 			$(".ctm-playlist-menu").append(`
 				<li id="playlist-${element.id}" class="ctm-item">
 					<i class="fa fa-plus"></i>
@@ -108,14 +107,13 @@ window.addEventListener("contextmenu", e => {
 			$(`#playlist-${element.id}`).on("click", () => {
 				element.songList.push(song);
 				user.setPlaylists(playlists);
-				user.saveCookie();
-							
+				user.saveCookie();		
 			});
 		}
 	});
+	/* save changes allways */
 	user.setPlaylists(playlists);
 	user.saveCookie();
-
 	/* Contex menu appearance logic */
     let x = e.pageX, y = e.pageY,
     winWidth = window.innerWidth,
@@ -128,10 +126,8 @@ window.addEventListener("contextmenu", e => {
         shareMenu.style.left = "";
         shareMenu.style.right = "-220px";
     }
-	
     x = x > winWidth - cmWidth ? winWidth - cmWidth - 5 : x;
     y = y > winHeight - cmHeight ? winHeight - cmHeight - 5 : y;
-    
     contextMenu.style.left = `${x}px`;
     contextMenu.style.top = `${y}px`;
 	if (y > (winHeight / 2)) {
