@@ -13,8 +13,16 @@ function generate_lists(){
     newUser = new UserData();
     newUser.populateFromJSON(JSON.parse(requestUserDatabase));
     let playlists = newUser.user_lists
+    if (playlists.length == 0){
+        $(".all-playlist-container").append(`
+        <div>
+            <h1>No tienes playlis disponibles aún!</h1>
+        </div>
+    `)  
+
+    }
     for (let pl = 0; pl < playlists.length; pl++){
-        $(".content").append(`
+        $(".all-playlist-container").append(`
         <div class="all-playlist-container" onclick = "Funcion(${playlists[pl]}})">
             <h1>${playlists[pl].titulo}</h1>
         </div>
