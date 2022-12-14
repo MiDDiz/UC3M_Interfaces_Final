@@ -23,14 +23,6 @@
 		<div class="logo">
 			<a href="index.html"><img src="images/logo.png" alt="logo" href height="55px"></a>
 		</div>
-		<div class ="search-box-wrapper">
-			<div class="search-box">
-			  <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></i>
-
-			  </button>
-			  <input id="search-bar" type="text" class="input-search" placeholder="    Buscador...">
-			</div>
-		</div>
 		<div class="sign-log-in-button" onclick="openPage('./register.html')">
 			<div style="align-self: center;">
 				Registrarse
@@ -64,11 +56,11 @@
 					<button onclick="log_out()">Cerrar Sesion</button>
 				</div>
 			</div>
-			<div class="sidebar-button-notloged">
+			<div class="sidebar-button-notloged" onclick="openPage('./news.html')">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-star" style="color: white;"></i>
 					</div>
-				<div class="sidebar-button-text" onclick="openPage('./news.html')">
+				<div class="sidebar-button-text">
 					Descubre nuevas canciones
 				</div>
 			</div>
@@ -88,7 +80,7 @@
 					Playlist creadas
 				</div>
 			</div>
-			<div class="sidebar-button-loged" id="liked-songs">
+			<div class="sidebar-button-loged" id="liked-songs" onclick="openPage('./playlist.html')">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-heart" style="color: white;"></i>
 					</div>
