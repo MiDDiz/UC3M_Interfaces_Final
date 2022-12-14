@@ -875,6 +875,7 @@ background: #DBB2FF;
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 30px;
+    padding: 1px;
     width: 80%;
     
     color: white;
@@ -894,7 +895,7 @@ background: #DBB2FF;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-self:  center;
 
     color: white;
