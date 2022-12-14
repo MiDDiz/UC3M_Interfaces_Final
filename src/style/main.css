@@ -900,7 +900,7 @@ background: #DBB2FF;
 	margin: 0;
 	min-height: 80px;
 	max-height: 80px;
-	display: flex;
+	display: none;
 	flex-direction: row;
 }
 .player .left {
@@ -1136,5 +1136,13 @@ margin-left: 10%;
     align-self: center;
     width: 30%;
 }
+/* -----------------------ACCOUNT CSS---------------------- */
+.account-content{
+    margin-left: 0%;
+    width: 100%;
+}
 
+.account-change-button{
+    width: 20%;
+}
 }

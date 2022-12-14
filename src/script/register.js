@@ -12,12 +12,21 @@ function check_for_logged_user(){
 
 function get_all_reg_data() {
 	var regData;
+	let imag = $("#reg_img").val()
+	if (imag == ""){
+		let nameimage = ("miño.jpg")
+	}
+	else{
+		nameimage=imag.split("\\");
+		nameimage = (nameimage[nameimage.length-1])
+	}
+	
 	regData = {
 		email: $("#reg_email").val(),
 		username: $("#reg_username").val(),
 		password: $("#reg_passwd").val(),
 		date: $("#reg_date").val(),
-		img: $("#reg_img").val()
+		img: nameimage
 	}
 	return regData;
 }

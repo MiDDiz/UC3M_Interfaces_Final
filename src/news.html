@@ -42,7 +42,7 @@
 		</div>
 		<div id="cred_bar">
 			<button class="usr_img_btn" onclick="dropUserMenu()">
-				<img class="usr_img" src="./images/miño.jpg">
+				<img class="usr_img" src="./images/miño.jpg" id="pfmv">
 			</button>
 			<div id="myDropdown" class="dropdown-content">
 				<button onclick="openPage('./account.html')">Cuenta</button>
@@ -55,7 +55,7 @@
 		<div class="sidebar" id="id-sidebar">
 			<div id="cred_bar_mobile">
 				<button class="usr_img_btn" onclick="dropUserMenu()">
-					<img class="usr_img" src="./images/miño.jpg">
+					<img class="usr_img" src="./images/miño.jpg" id="mainimage">
 				</button>
 				<div id="myDropdown_mobile" class="dropdown-content">
 					<button onclick="openPage('./account.html')">Cuenta</button>
@@ -126,7 +126,7 @@
 			<h2>¡Bienvenido a spotifin't, registrate para no perderte nada!</h2>
 		</div>
 	</div>
-	<div class="player">
+	<div class="player" id="player">
 		<div class="left">
 			<img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Portada del álbum" id="cover_art">
 		</div>
@@ -141,6 +141,7 @@
 		</div>
 	</div>
 	<!-- Home Page -->
+	<script src="script/userData.js"></script>
 	<script src="script/index.js"></script>
 	<script src="script/music.js"></script>
     <script src="script/news.js"></script>

@@ -45,7 +45,7 @@
 		</div>
 		<div id="cred_bar">
 			<button class="usr_img_btn" onclick="dropUserMenu()">
-				<img class="usr_img" id="main-image" src="./images/miño.jpg">
+				<img class="usr_img" id="pfmv" src="./images/miño.jpg">
 			</button>
 			<div id="myDropdown" class="dropdown-content">
 				<button onclick="openPage('account.html')">Cuenta</button>
@@ -58,7 +58,7 @@
 		<div class="sidebar" id="id-sidebar">
 			<div id="cred_bar_mobile">
 				<button class="usr_img_btn" onclick="dropUserMenu()">
-					<img class="usr_img" src="./images/miño.jpg">
+					<img class="usr_img" id="mainimage" src="./images/miño.jpg" >
 				</button>
 				<div id="myDropdown_mobile" class="dropdown-content">
 					<button onclick="openPage('../account.html')">Cuenta</button>
@@ -86,7 +86,7 @@
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-layer-group" style="color: white;"></i>
 					</div>
-				<div class="sidebar-button-text">
+				<div class="sidebar-button-text" onclick="openPage('./allplaylist.html')">
 					Playlist creadas
 				</div>
 			</div>
@@ -232,7 +232,7 @@
 			<h2>¡Bienvenido a spotifin't, registrate para no perderte nada!</h2>
 		</div>
 	</div>
-	<div class="player">
+	<div class="player" id="player">
 		<div class="left">
 			<img src="./images/default_music.png" alt="Portada del álbum" id="cover_art">
 		</div>
