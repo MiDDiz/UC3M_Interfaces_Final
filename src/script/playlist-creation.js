@@ -1,6 +1,7 @@
+/* variable playlist global que iremos construyedo poco a poco*/
 let playlist = new Playlist([], "", null);
 
-
+/* Si un elemento ya existe en la playist, tendremos que cambiar el display del botton.*/ 
 function changeCross(elem){
 	let querry = elem.querySelector(".fa-plus");
 	console.log(elem);
@@ -9,25 +10,29 @@ function changeCross(elem){
 	} else {
 		elem.innerHTML = `<i class="fa fa-times fa-2x"></i>`
 	}
+	/* Y volver a tirar un search para actualizarlo correctamente.*/
 	startCustomSearch();
 }
 
 function startCustomSearch(){
+	/* Search medio diferente. */
 	// Get input
 	var querry = $("#search-bar").val();
 
 	// Get all matching songs
 	var songs = SongMaster.find(querry);
 
-	// Clear DOM.
 
 	$("#main_content").html("<div class='section'> </div>");
-	// Append elements Fount
+	// Clear DOM.
+
 	$(".section").html("")
+	// Append elements parents
 	$(".section").append(`
 		<div class="section-title">Resultados</div>
 		<div class="section-content"></div>
 	`)
+	 /* Genera para cada cancion un elemento cancion con el hover correspondiente */
 	songs.forEach(song => {
 		$(".section-content").append(`
 			<div class="section-song">
@@ -41,6 +46,7 @@ function startCustomSearch(){
 				</div>
 			</div>
 		`);
+		/* Añade el hover correspondiente y su funcionalidad asociada */
 		let querry = document.getElementsByClassName("round-button-add");
 		console.log("Has: " + playlist.alreadyHas(song));
 		if (playlist.alreadyHas(song)){
@@ -65,9 +71,11 @@ function startCustomSearch(){
 
 
 function __init__(){
+	/* Activa la barra de busqueda */
 	$("#search-bar").keyup(() => {
 		startCustomSearch();
 	})
+	/* Logica de creación de playlists*/
 	$("#gen-playlist").click(() => {
 		let title = $("#playlist-title").val() ;
 		if (title == ""){
@@ -81,6 +89,7 @@ function __init__(){
 		playlist.id = id;
 		user.appendList(playlist);
 		user.saveCookie();
+		openPage("./index.html");
 	})
 
 }
