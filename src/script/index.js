@@ -3,21 +3,7 @@ let is_sidebar_on=0;
 
 __init__();
 
-class HandlerPlaylist {
-	constructor(is_liked) {
-		this.is_liked = is_liked;
-		this.id = null;
-	}
-	setStorage() {
-		localStorage.setItem("handler_playlists", JSON.stringify(this));
-	}
-	load() {
-		let requestHandlerDatabase = localStorage.getItem("handler_playlists");
-		let parsedRequest = JSON.parse(requestHandlerDatabase)
-		this.is_liked = parsedRequest["is_liked"];
-		this.id = parsedRequest["id"];
-	}
-}
+
 
 function openPage(site) {
     document.location.href = site;
@@ -26,8 +12,8 @@ function openPage(site) {
 function openMobileSidebar() {
     let sidebar = $('#id-sidebar');
 	let content = $('#main_content');
-    if (is_sidebar_on==0){
-        is_sidebar_on=1;
+    if (is_sidebar_on == 0){
+        is_sidebar_on = 1;
         sidebar.show("100");
 		content.hide();
 
@@ -125,21 +111,29 @@ function hook_sidebar_buttons(){
 	});
 }
 
+function get_current_site(){
+	console.log(location.pathname.split('/').slice(-1)[0]);
+	return location.pathname.split('/').slice(-1)[0];
+}
+
 /* Search bar logic */
 function startSearch(){
+	
 	// Get input
 	var querry = $("#search-bar").val();
-	// If empty querry return site to normal:
+	// If empty querry return site to normal only if not on playlist creation:
 	if (querry== "")
-		location.reload();
-	// Store as last querry
+	{
+		console.log("Refresh")
+	}
+		// Store as last querry
 
 
 	// Get all matching songs
 	var songs = SongMaster.find(querry);
-	console.log(songs);
+
 	// Clear DOM.
-	console.log(songs);
+
 	$("#main_content").html("<div class='section'> </div>");
 	// Append elements Fount
 	$(".section").append(`
@@ -204,10 +198,7 @@ function startSearch(){
 			</div>
 		`)
 	});
-
 }
-
-
 
 function hook_sidebar_buttons(){
 	$("#liked-songs").click(() => {
@@ -238,9 +229,11 @@ function __init__() {
 	hide_side_bar_on_mobile();
 	hide_user_img();
 	hook_click_hide_dropdown();
-	$("#search-bar").keyup(() => {
-		startSearch();
-	})
+	if (get_current_site() == "index.html"){
+		$("#search-bar").keyup(() => {
+			startSearch();
+		})
+	}
 	/* Logica de usuario loggeado */
 	if (!is_logged()){
 		switch_sidebar_notlogged();

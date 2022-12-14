@@ -55,3 +55,7 @@
 	opacity: 1;
 	pointer-events: auto;
   }
+.ctm-noplaylists {
+	opacity: 40%;
+	cursor:not-allowed !important;
+}

@@ -31,6 +31,12 @@ function removeSong(titulo){
 
 function generatePlaylist(songArray) {
 	let count = 1;
+	/* Si no hay canciones */ 
+	if (songArray.length == 0){
+		$(".playlist-content").append(`<span>No hay canciones actualmente.</span>`)
+		return ;
+	}
+	/* para cada cancion*/
 	songArray.forEach(song => {
 		$(".playlist-content").append(`
 			<div class="playlist-element" onclick="staticChangeSong('${song.cover}',
@@ -65,7 +71,5 @@ function generate(handler, user){
 		generatePlaylist(user.liked_songs);
 	}
 }
-
-
 
 __init__();

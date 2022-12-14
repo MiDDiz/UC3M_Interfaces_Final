@@ -24,6 +24,7 @@
 		<div class="logo">
 			<a href="index.html"><img src="images/logo.png" alt="logo" href height="55px"></a>
 		</div>
+		<!-- Search bar -->
 		<div class ="search-box-wrapper">
 			<div class="search-box">
 			  <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></i>
@@ -247,7 +248,7 @@
 	</div>
 
 
-	<!-- Rightclick ontext menu structure-->
+	<!-- Rightclick context menu structure-->
 
 	<div class="ctm-wrapper">
 		<div class="ctm-content">
@@ -270,9 +271,9 @@
 				<i class="ctm-play fa-solid fa-caret-right"></i>
 				<!-- Context submenu playlists-->
 				<ul class="ctm-playlist-menu">
-					<li class="ctm-item">
-						<i class="fa-solid fa-play"></i>
-						<span>Playlist name</span>
+					<li class="ctm-item ctm-noplaylists">
+						<i class="fa fa-ban" aria-hidden="true"></i>
+						<span>No playlists</span>
 					</li>
 				</ul>
 			</li>
@@ -280,10 +281,10 @@
 		</div>
 	  </div>
 
-
 	<script src="script/userData.js"></script>
-	<script src="script/index.js"></script>
 	<script src="script/music.js"></script>
+	<script src="script/playlists-components.js"></script>
+	<script src="script/index.js"></script>
 	<script src="script/news.js"></script>
 	<script src="script/context-menu.js"></script>
 </body>

@@ -18,7 +18,6 @@ function get_current_logged_user(){
 	let user = new UserData();
 	let a = localStorage.getItem(current_user)
 	user.populateFromJSON(JSON.parse(a));
-	console.log(user);
 	return user
 }
 
@@ -29,23 +28,31 @@ function getSongFromParent(parent){
 }
 
 window.addEventListener("contextmenu", e => {
+	/* Advanced context menu item generation */
+
+	/* we need to remove previous like/dislike functionality hooks */
 	$(".ctm-liked").off();
 	$(".ctm-unliked").off();
-
+	/* If user is not logged we dont display custom menu*/
     let user = get_current_logged_user();
 	if (user == null)
 		return ;
 	let parent = get_parent(e);
+	/* We try to display the context menu only when user clicked o a song*/
 	if (parent == null)
 	{
 		contextMenu.style.visibility = "hidden"
 		return;
 	}
 	e.preventDefault();
+	/* If previos checks are succesful*/
 	let song = getSongFromParent(parent);
+	/* check whether the song is liked or not -> 
+		display either like or dislike button*/
 	if (user.alreadyLiked(song.title)){
 		$(".ctm-unliked").hide();
 		$(".ctm-liked").show();
+		/* hook dislike functuiality*/
 		$(".ctm-liked").on("click", () => {
 			user.removeSong(song);
 			user.saveCookie();
@@ -55,25 +62,59 @@ window.addEventListener("contextmenu", e => {
 	else {
 		$(".ctm-unliked").show();
 		$(".ctm-unliked").on("click", () => {
+			/* hook like functionality */
 			user.appendSong(song);
 			user.saveCookie();
 			contextMenu.style.visibility = "hidden";
-
-			
 		});
 		$(".ctm-liked").hide();
 	}
-
-
-
-
-
-
-
-
-
-
-
+	/* playlist logic.*/
+	let playlists = user.getPlaylists();
+	if (playlists.length > 0)
+	{
+		/* if there is no playlist */
+		$(".ctm-noplaylists").hide();
+		$(".ctm-playlist-menu").html("");
+	}
+	playlists.forEach(element => {
+		let static = new Playlist()
+		if (static.staticAlreadyHas(element, song)){
+			console.log(2);
+			$(".ctm-playlist-menu").append(`
+				<li id="playlist-${element.id}" class="ctm-item">
+					<i class="fa fa-times"></i>
+					<span>${element.titulo}</span>
+				</li>
+			`);
+			$(`#playlist-${element.id}`).on("click", () => {
+				console.log("Element before")
+				console.log(element)
+				element = static.staticRemoveSong(element, song);
+				console.log("Element after")
+				console.log(element)
+				user.setPlaylists(playlists);
+				user.saveCookie();
+			})
+		}
+		else {
+			console.log(1);
+			$(".ctm-playlist-menu").append(`
+				<li id="playlist-${element.id}" class="ctm-item">
+					<i class="fa fa-plus"></i>
+					<span>${element.titulo}</span>
+				</li>
+			`);
+			$(`#playlist-${element.id}`).on("click", () => {
+				element.songList.push(song);
+				user.setPlaylists(playlists);
+				user.saveCookie();
+							
+			});
+		}
+	});
+	user.setPlaylists(playlists);
+	user.saveCookie();
 
 	/* Contex menu appearance logic */
     let x = e.pageX, y = e.pageY,

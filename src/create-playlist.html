@@ -25,6 +25,13 @@
 		<div class="logo">
 			<a href="index.html"><img src="images/logo.png" alt="logo" href height="55px"></a>
 		</div>
+		<div class ="search-box-wrapper">
+			<div class="search-box">
+			  <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></i>
+			  </button>
+			  <input id="search-bar" type="text" class="input-search" placeholder="    Buscador...">
+			</div>
+		</div>
 		<div id="cred_bar">
 			<button class="usr_img_btn" onclick="dropUserMenu()">
 				<img class="usr_img" src="./images/miño.jpg">
@@ -89,30 +96,23 @@
 			<div class="section-space">br</div>
 			<!-- Main content-->
 			<div class="playlist-wrapper">
-				<!-- Playlist wrapper -->
+				<!-- We will use this wrapper for this too -->
 				<div class="playlist-title">
 					<!-- Playlist title -->
-					<h1>El Madrileño</h1>
+					<h1>✨Crea tu nueva playlist✨</h1>
 				</div>
-				<div class="playlist-content">
-					<!-- Playlist container for each playlist element-->
-					<!-- All this content must be generated dynamically -->
-					<!-- Example element from the playlist
-					<div class="playlist-element">
-						 
-						<span class="element-number">1</span>
-						<div class="element-img">
-							<img src="./images/default_music.png" alt="Music" srcset="">
-						</div>
-						<span class="element-title">Tu Me Dejaste De Querer</span>
-						<span class="element-artists">C. Tangana, Niño de Elche, La Húngara</span>
-						<span class="element-time">3:18</span>
-						<button class="element-remove">
-							<i class="fa fa-times" aria-hidden="true"></i>
-						</button>
+				<h2>Primero danos un titulo: </h2>
+				<div class="title">
+					<input id="playlist-title" type = "text" placeholder="Titulo de la playlist">
+					<button id="gen-playlist"> Crear playlist</button>
+				</div>
+				<h4> Y ahora usa el buscador de la parte de arriba para ir añadiendo canciones!</h4>
+				<span> Recuerda que puedes añadirlas en otros lugares usando el click derecho ;)</span>
+				<div class="section">
+					<div class="section-title">Resultados</div>
+					<div class="section-content">
+						<span>Todavia no hay busqueda!</span>
 					</div>
-					-->
-				</div>
 			</div>
 		</div>
 	</div>
@@ -139,7 +139,6 @@
 	<script src="script/index.js"></script>
 	<script src="script/music.js"></script>
 	<script src="script/playlists-components.js"></script>
-	<script src="script/playlist.js"></script>
-	
+	<script src="script/playlist-creation.js"></script>
 </body>
 </html>

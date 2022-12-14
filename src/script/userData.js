@@ -47,8 +47,35 @@ class UserData {
 		this.liked_songs = newLikedSongs;
 	}
 
+	getPlaylists(){
+		return this.user_lists;
+	}
+
+	setPlaylists(playlist){
+		this.user_lists = playlist;
+	}
+
+	getNextPlaylistId(){
+		let id = -1;
+		if (this.user_lists.length == 0)
+			return 0;
+		this.user_lists.forEach(element => {
+			if (id < element.id){
+				id = element.id;
+			}
+		});
+		id = id + 1;
+		return (id);
+	}
+
 	saveCookie(){
 		localStorage.setItem(this.username, JSON.stringify(this));
+	}
+
+	getCookie(){
+		let logged = localStorage.getItem("logged");
+		let reqDb = localStorage.getItem(logged);
+		this.populateFromJSON(JSON.parse(reqDb));
 	}
 
 	populateForm (data) {
