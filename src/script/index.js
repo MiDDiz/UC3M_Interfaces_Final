@@ -224,13 +224,7 @@ function get_image(){
 	newUser = new UserData();
 	newUser.populateFromJSON(JSON.parse(requestUserDatabase));
 	img = newUser.usr_img;
-	if (img == ""){
-		return ("images/miño.jpg")
-	}
-	else{
-		nameimage=img.split("\\");
-    	return("images/"+nameimage[nameimage.length-1]);
-	}
+	return img;
 	
 }
 function __init__() {

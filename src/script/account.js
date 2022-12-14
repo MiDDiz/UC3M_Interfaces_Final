@@ -8,13 +8,14 @@ function set_acc_data(){
     $("#acc-curr-user").text(oldUser.username);
     $("#acc-curr-email").text(oldUser.email);
     $("#acc-curr-birth").text(oldUser.birthday);
-    imgname="images/" + oldUser.usr_img;
+    imgname= oldUser.usr_img;
     $("#user-img").attr("src",imgname);
     return oldUser;
 }
 
 function get_all_acc_data() {
 	var accData;
+    alert($("#acc_date").val())
 	accData = {
 		email: $("#acc_email").val(),
 		username: $("#acc_username").val(),
@@ -39,7 +40,7 @@ function check_acc_data(newUser, auxUser){
     }
     if (auxUser.usr_img != ""){
         nameimage=auxUser.usr_img.split("\\");
-    	newUser.usr_img =(nameimage[nameimage.length-1]);
+    	newUser.usr_img =("images/" + nameimage[nameimage.length-1]);
     }
     return newUser;
 

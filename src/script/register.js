@@ -13,14 +13,20 @@ function check_for_logged_user(){
 function get_all_reg_data() {
 	var regData;
 	let img = $("#reg_img").val()
-	nameimage=img.split("\\");
+	if (img == ""){
+		nameimage = ("images/miño.jpg")
+	}
+	else{
+		nameimage=img.split("\\");
+		nameimage = (nameimage[nameimage.length-1])
+	}
 	
 	regData = {
 		email: $("#reg_email").val(),
 		username: $("#reg_username").val(),
 		password: $("#reg_passwd").val(),
 		date: $("#reg_date").val(),
-		img: (nameimage[nameimage.length-1])
+		img: nameimage
 	}
 	return regData;
 }
