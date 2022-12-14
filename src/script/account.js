@@ -15,7 +15,6 @@ function set_acc_data(){
 
 function get_all_acc_data() {
 	var accData;
-    alert($("#acc_date").val())
 	accData = {
 		email: $("#acc_email").val(),
 		username: $("#acc_username").val(),
