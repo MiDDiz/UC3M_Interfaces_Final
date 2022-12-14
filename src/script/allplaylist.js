@@ -16,7 +16,7 @@ function generate_lists(){
     for (let pl = 0; pl < playlists.length; pl++){
         $(".content").append(`
         <div class="all-playlist-container" onclick = "Funcion(${playlists[pl]}})">
-            <h1>${playlists[pl]}</h1>
+            <h1>${playlists[pl].titulo}</h1>
         </div>
     `)
     }
