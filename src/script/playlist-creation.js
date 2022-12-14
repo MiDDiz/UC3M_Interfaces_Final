@@ -18,14 +18,10 @@ function startCustomSearch(){
 	/* Search medio diferente. */
 	// Get input
 	var querry = $("#search-bar").val();
-
 	// Get all matching songs
 	var songs = SongMaster.find(querry);
-
-
 	$("#main_content").html("<div class='section'> </div>");
 	// Clear DOM.
-
 	$(".section").html("")
 	// Append elements parents
 	$(".section").append(`
@@ -91,7 +87,6 @@ function __init__(){
 		user.saveCookie();
 		openPage("./index.html");
 	})
-
 }
 
 __init__();
