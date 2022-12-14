@@ -1068,5 +1068,13 @@ margin-left: 10%;
     align-self: center;
     width: 30%;
 }
+/* -----------------------ACCOUNT CSS---------------------- */
+.account-content{
+    margin-left: 0%;
+    width: 100%;
+}
 
+.account-change-button{
+    width: 20%;
+}
 }
