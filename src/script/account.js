@@ -8,7 +8,7 @@ function set_acc_data(){
     $("#acc-curr-user").text(oldUser.username);
     $("#acc-curr-email").text(oldUser.email);
     $("#acc-curr-birth").text(oldUser.birthday);
-    imgname= oldUser.usr_img;
+    imgname= get_image();
     $("#user-img").attr("src",imgname);
     return oldUser;
 }
@@ -39,7 +39,7 @@ function check_acc_data(newUser, auxUser){
     }
     if (auxUser.usr_img != ""){
         nameimage=auxUser.usr_img.split("\\");
-    	newUser.usr_img =("images/" + nameimage[nameimage.length-1]);
+    	newUser.usr_img =(nameimage[nameimage.length-1]);
     }
     return newUser;
 

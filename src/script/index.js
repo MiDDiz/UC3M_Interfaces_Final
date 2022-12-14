@@ -26,6 +26,7 @@ function openPage(site) {
 function openMobileSidebar() {
     let sidebar = $('#id-sidebar');
 	let content = $('#main_content');
+	let imgname = get_image();
     if (is_sidebar_on==0){
         is_sidebar_on=1;
         sidebar.show("100");
@@ -52,6 +53,8 @@ function hide_side_bar_on_mobile() {
 function is_logged() {
 	if (localStorage.getItem("logged") == null)
 		return false;
+	let imgname = get_image();
+	$(".usr_img").attr("src",imgname);
 	return true;
 }
 
@@ -90,8 +93,6 @@ function hide_user_img() {
 }
 
 function show_user_img(){
-	let imgname = get_image();
-	$("#main-image").attr("src",imgname);
 	$("#cred_bar").show();
 }
 function switch_sidebar_logged(){
@@ -223,8 +224,8 @@ function get_image(){
 	requestUserDatabase = localStorage.getItem(curr_user);
 	newUser = new UserData();
 	newUser.populateFromJSON(JSON.parse(requestUserDatabase));
-	img = newUser.usr_img;
-	return img;
+	img = "images/" + newUser.usr_img;
+	return  img;
 	
 }
 

@@ -12,12 +12,12 @@ function check_for_logged_user(){
 
 function get_all_reg_data() {
 	var regData;
-	let img = $("#reg_img").val()
-	if (img == ""){
-		nameimage = ("images/miño.jpg")
+	let imag = $("#reg_img").val()
+	if (imag == ""){
+		let nameimage = ("miño.jpg")
 	}
 	else{
-		nameimage=img.split("\\");
+		nameimage=imag.split("\\");
 		nameimage = (nameimage[nameimage.length-1])
 	}
 	
