@@ -6,6 +6,8 @@ __init__();
 
 function __init__() {
     let song_numb_list = create_reandom_list();
+    let imgname = get_image();
+    $("#newspf").attr("src",imgname);
     for (let song = 0; song < song_numb_list.length; song++){
         let newsong = getElems(song_numb_list[song])
         $(".news-rand-song").append(`
