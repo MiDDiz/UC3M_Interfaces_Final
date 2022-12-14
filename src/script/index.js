@@ -227,6 +227,7 @@ function get_image(){
 	return img;
 	
 }
+
 function __init__() {
 	/* Lógica global*/
 	hide_side_bar_on_mobile();
