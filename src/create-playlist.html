@@ -10,14 +10,13 @@
 	<link rel="stylesheet" href="style/playlist.css">
 	<!-- JQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- Roboto -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-
 </head>
 <body>
+	<!-- Standard header with searchbar -->
 	<div class="header">
 		<div class="mobile-sidebar" onclick="openMobileSidebar()">
 			<i class="fa-solid fa-bars" style="color: white;"></i>
@@ -45,6 +44,7 @@
 	</div>
 	<div class="body-wraper">
 		<div class="sidebar">
+			<!-- Standard sidebar -->
 			<div id="cred_bar_mobile">
 				<button class="usr_img_btn" onclick="dropUserMenu()">
 					<img class="usr_img" src="./images/miño.jpg">
@@ -98,16 +98,17 @@
 			<div class="playlist-wrapper">
 				<!-- We will use this wrapper for this too -->
 				<div class="playlist-title">
-					<!-- Playlist title -->
 					<h1>✨Crea tu nueva playlist✨</h1>
 				</div>
 				<h2>Primero danos un titulo: </h2>
+					<!-- Playlist title input -->
 				<div class="title">
 					<input id="playlist-title" type = "text" placeholder="Titulo de la playlist">
 					<button id="gen-playlist"> Crear playlist</button>
 				</div>
 				<h4> Y ahora usa el buscador de la parte de arriba para ir añadiendo canciones!</h4>
 				<span> Recuerda que puedes añadirlas en otros lugares usando el click derecho ;)</span>
+				<!-- Search section -->
 				<div class="section">
 					<div class="section-title">Resultados</div>
 					<div class="section-content">
