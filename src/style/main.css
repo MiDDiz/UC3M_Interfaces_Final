@@ -67,7 +67,7 @@ body{
   /* Links inside the dropdown */
   .dropdown-content button {
 	cursor: pointer;
-	color: #a98ed5;
+	color: #7F39FB;
 	padding: 1em 0.2em;
 	text-decoration: none;
 	width: 100%;
@@ -351,6 +351,7 @@ body{
                 width: 100%;
 
                 font-size: 50px;
+                color:#7F39FB;
 
                 padding: 0;
                 margin-bottom: 5px;
@@ -1211,6 +1212,7 @@ background: #DBB2FF;
 	width: 14%;
 	border-radius: 10px;
 	background: #fff;
+    color:#7F39FB;
 	box-shadow: 0 12px 35px rgba(0,0,0,0.1);
 	height: fit-content;
 	min-width: 180px;
