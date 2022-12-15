@@ -52,7 +52,7 @@ function formatTime(time){
 
 function changeDoms(user, domelem){
 	const usr_img = domelem.querySelector(".ranking-usr-img");
-	const usr_name = domelem.querySelector("#ranking-user-1");
+	const usr_name = domelem.querySelector("h4");
 	const span_text = domelem.querySelector("span");
 
 
@@ -79,6 +79,7 @@ function fillDomWithTopUsers(topUsers){
 function __init__() {
 	/* obtener todos los usuarios */
 	let top_users = getTopUsers();
+	console.log(top)
 	fillDomWithTopUsers(top_users);
 }
 
