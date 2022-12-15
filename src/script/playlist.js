@@ -43,7 +43,12 @@ function removeSong(titulo){
 		location.reload();
 	}
 	else {
-
+		let playlist = user_playlist.getPlaylistById(handler_playlist.id);
+		let static = new Playlist();
+		static.staticRemoveSong(playlist, song);
+		user_playlist.updatePlaylists(playlist);
+		user_playlist.saveCookie();
+		location.reload();
 	}
 }
 
@@ -87,6 +92,10 @@ function generate(handler, user){
 	if (handler.is_liked == true) {
 		changeTitle("Tus likes");
 		generatePlaylist(user.liked_songs);
+	} else {
+		let playlist = user.getPlaylistById(handler.id);
+		changeTitle(playlist.titulo);
+		generatePlaylist(playlist.songList);
 	}
 }
 

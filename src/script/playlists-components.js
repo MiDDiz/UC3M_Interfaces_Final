@@ -67,6 +67,8 @@ class Playlist {
 		this.songList.splice(index, 1);
 	}
 
+	
+
 	staticRemoveSong (element, removeSong) {
 		var removeTitle = removeSong.title;
 		let index;

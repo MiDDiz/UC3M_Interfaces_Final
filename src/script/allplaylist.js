@@ -23,9 +23,18 @@ function generate_lists(){
     }
     for (let pl = 0; pl < playlists.length; pl++){
         $(".all-playlist-main-container").append(`
-        <div class="all-playlist-container" onclick = "Funcion(${playlists[pl]}})">
+        <div id="playlist-${playlists[pl].id}" class="all-playlist-container">
             <h1>${playlists[pl].titulo}</h1>
         </div>
     `)
+	$(`#playlist-${playlists[pl].id}`).click(() => {
+		alert(1);
+		let hp = new HandlerPlaylist();
+		hp.id = playlists[pl].id;
+		hp.is_liked = false;
+		hp.setStorage();
+		openPage("./playlist.html");
+	});
+
     }
 }

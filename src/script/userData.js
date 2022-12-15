@@ -39,6 +39,27 @@ class UserData {
 		this.user_lists.push(list);
 	}
 
+	updatePlaylists(playlist){
+		let new_playlists = []
+		this.user_lists.forEach(list => {
+			if (list.id != playlist.id) {
+				new_playlists.push(list);
+			} else {
+				new_playlists.push(playlist);
+			}
+		});
+	}
+
+	getPlaylistById(id){
+		let playlist = null;
+		this.user_lists.forEach(list => {
+			if (list.id == id){
+				playlist = list;
+			}
+		});
+		return (playlist);
+	}
+
 	appendSong(song){
 		this.liked_songs.push(song);
 		this.saveCookie();

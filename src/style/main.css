@@ -922,6 +922,10 @@ background: #DBB2FF;
     text-align: center;
 }
 
+.all-playlist-main-container {
+	margin-top: 3em;
+}
+
 .all-playlist-button{
     width: fit-content;
     height: 40px;
