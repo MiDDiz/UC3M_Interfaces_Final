@@ -16,7 +16,7 @@ function yes() {
 				<i class="fa fa-play fa-2x"></i>
 			</a>
 			<div class="cover-img">
-				<img src=${song.cover}>
+				<img src=${song.cover} alt="song">
 				<p class="title">${song.title}</p>
 				<p class="artist">${song.artist}</p>	
 			</div>
