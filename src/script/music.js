@@ -97,6 +97,7 @@ function changeSong(n) {
 }
 
 function staticChangeSong(cover, title, artist, path) {
+	console.log(cover)
 	var x = document.getElementById("player");
     var coverArt = document.getElementById("cover_art");
     var songTitle = document.getElementById("song");
