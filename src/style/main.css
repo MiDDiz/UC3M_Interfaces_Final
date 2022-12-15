@@ -10,6 +10,7 @@ html{
 
     /* From acc */
     color: rgba(169, 142, 213, 1);
+
 }
 
 
@@ -869,7 +870,7 @@ background: #DBB2FF;
         box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
         border-radius: 50px;
     }
-/* -----------------------PLAYLISTS CSS---------------------- */
+/* -----------------------ALL-PLAYLISTS CSS---------------------- */
 .all-playlist-container{
     margin-left: auto;
     margin-right: auto;
@@ -903,6 +904,127 @@ background: #DBB2FF;
     cursor: pointer;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
+}
+
+/* -----------------------PLAYLISTS CSS---------------------- */
+
+.playlist-wrapper {
+	--margin-top: 75px;
+	margin: 2.5%;
+	height: calc(100% - var(--margin-top));
+	margin-top: var(--margin-top);
+	width: 95%;
+}
+
+.playlist-title {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 2.5rem;
+	width: fit-content;
+	height: fit-content;
+	/* identical to box height, or 23% */
+	color: #9747FF;
+}
+
+.playlist-element {
+	background: #FFFFFF;
+	/* 12 dp */
+	box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: row;
+	height: 3.5em;
+	align-items: center;
+	margin-bottom: 2em;
+	cursor: pointer;
+}
+.playlist-element:hover {
+	opacity: 80%;
+}
+
+.element-number {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 22px;
+
+	/* identical to box height, or 110% */
+	letter-spacing: -0.908px;
+
+	color: #000000;
+
+	opacity: 0.4;
+
+	margin-left: 1em;
+	margin-right: 2em;
+}
+.element-img{
+	max-width: 100%;
+	max-height: 100%;
+	margin-right: 10%
+    
+}
+.element-img img {
+	max-height: 3.5em;
+}
+
+
+
+.element-title {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	/* identical to box height, or 150% */
+	letter-spacing: 0.15px;
+	/* 00. On Surface / High Emphasis */
+	color: rgba(0, 0, 0, 0.87);
+	margin-right: 10%;
+}
+
+.element-artists {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+
+	/* identical to box height, or 143% */
+	letter-spacing: 0.25px;
+
+	color: #9747FF;
+	margin-right: 10%;
+}
+
+.element-time {
+	/* Body 2 */
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+
+	/* identical to box height, or 143% */
+	letter-spacing: 0.25px;
+	color: #9747FF;
+	margin-right: 10%;
+}
+
+.playlist-element span {
+	max-height: 100%;
+}
+
+.element-remove {
+	/* 01. Primary/50 */
+	background: #F2E7FE;
+	/* 04 dp */
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 50px;
+	height: 2em;
+	width: 2em;
+	margin-right: 1.5em;
 }
 
 /* ----------------------- Common ---------------------- */    
@@ -983,7 +1105,7 @@ background: #DBB2FF;
 } 
 
 /* -----------------------Playlist creation CSS---------------------- */    
-
+/*
 .playlist-wrapper .title input{
     width: 65%;
     padding: 14px 30px;
@@ -991,7 +1113,7 @@ background: #DBB2FF;
     border-radius: 10px;
     cursor: text;
 }
-
+*/
 .section-song:hover > .round-button-add{
 	opacity: 100%;
 }
@@ -1023,7 +1145,7 @@ background: #DBB2FF;
 	box-shadow: 0px 0px 10px rgb(99, 99, 99);
 	text-shadow: 0px 0px 10px rgba(99,99,99);
 }
-
+/*
 .playlist-wrapper .title {
 	display: flex;
 	flex-direction: row;
@@ -1049,7 +1171,7 @@ background: #DBB2FF;
 .playlist-wrapper .title button:hover {
 	opacity: 80%;
 }
-
+*/
 /* ---------------------------------------------------------------------- */
 /* -----------------------------TABLET DISPLAY--------------------------- */
 /* ---------------------------------------------------------------------- */
@@ -1092,6 +1214,10 @@ background: #DBB2FF;
     .loginbutton{
         align-self: center;
         width: 25%;
+    }
+/* -----------------------PLAYLISTS CSS---------------------- */
+    .playlist-element span {
+        font-size: 0.65em;
     }
 }
 
@@ -1181,4 +1307,12 @@ margin-left: 10%;
 .account-change-button{
     width: 20%;
 }
+/* -----------------------PLAYLISTS CSS---------------------- */
+    html {
+        --playlist-margin: 1em;
+    }
+    .playlist-element span {
+        font-size: 0.65em;
+            
+    }
 }
