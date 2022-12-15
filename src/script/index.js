@@ -234,8 +234,8 @@ function get_image(){
 async function countTimer(){
 	let repr = document.getElementById("song_file");
 	
-	user = new UserData();
-	user.getCookie();
+	user_playlist = new UserData();
+	user_playlist.getCookie();
 
 	try {
 		repr.addEventListener('pause', (event) => {
@@ -247,8 +247,8 @@ async function countTimer(){
 	try {
 		repr.addEventListener('play', (event) => {
 			timer = setInterval(() => {
-				user.getCookie();
-				user.addTime(1);
+				user_playlist.getCookie();
+				user_playlist.addTime(1);
 			}, 1000);
 		});
 	} catch (error) {

@@ -1,11 +1,11 @@
-let user;
+let user_playlist;
 let handler_playlist;
 function loadUser() {
-	user = new UserData();
+	user_playlist = new UserData();
 	let logged = localStorage.getItem("logged");
 	let requestUserDatabase = localStorage.getItem(logged);
-	user.populateFromJSON(JSON.parse(requestUserDatabase));
-	return user
+	user_playlist.populateFromJSON(JSON.parse(requestUserDatabase));
+	return user_playlist
 }
 
 function __init__() {
@@ -13,8 +13,8 @@ function __init__() {
 	
 	handler_playlist = new HandlerPlaylist();
 	handler_playlist.load();
-	user = loadUser();
-	generate(handler_playlist, user);
+	user_playlist = loadUser();
+	generate(handler_playlist, user_playlist);
 	hide_side_bar_on_mobile();
 	hide_user_img();
 	hook_click_hide_dropdown();
@@ -38,8 +38,8 @@ function __init__() {
 function removeSong(titulo){
 	let song = SongMaster.findByTitle(titulo);
 	if (handler_playlist.is_liked){
-		user.removeSong(song);
-		user.saveCookie();
+		user_playlist.removeSong(song);
+		user_playlist.saveCookie();
 		location.reload();
 	}
 	else {
