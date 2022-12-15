@@ -98,6 +98,7 @@
 				<br><br><br>
                 <div class="account-title">Ajustes de Cuenta </div>
 				<div class="account-image">
+					<label for="acc_img">Foto de perfil:</label>
 					<img class="account-img" id="user-img" src="./images/miño.jpg"  alt="user">
 				</div>
 				<div class="account-image-button">
@@ -105,26 +106,21 @@
 				</div>
 				<div class="account-data">
 					<div class="account-field">
-						<label>Nombre de usuario : </label><label id="acc-curr-user">nombre</label> 
+						<label for="acc_username" >Nombre de usuario : </label><label id="acc-curr-user">nombre</label> 
 						<input id="acc_username" type = "text" placeholder="Nuevo nombre de usuario">
 
 					</div>
-					<br>
 					<div class="account-field">
-						<label>Contraseña : </label>
-						<br>
+						<label for="acc_passwd">Contraseña :</label><label> *******</label> 
 						<input id="acc_passwd" type = "password" placeholder="Contraseña">
 					</div>
 					<div class="account-field">
-						<label>Email : </label><label id="acc-curr-email">correo</label> 
-						<br>
+						<label for="acc_email">Email : </label><label id="acc-curr-email">correo</label> 
 						<input id="acc_email" type = "text" placeholder="Nuevo email">
 
 					</div>
-					<br>
 					<div class="account-field">
-						<label>Fecha de nacimiento : </label><label id="acc-curr-birth">birthday</label> 
-						<br>
+						<label for="acc_date">Fecha de nacimiento : </label><label id="acc-curr-birth">birthday</label> 
 						<input id="acc_date" type = "date">
 					</div>
 				</div>
