@@ -22,18 +22,18 @@
 			<i class="fa-solid fa-bars" style="color: white;"></i>
 		</div>
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt="logo" href height="55px"></a>
+			<a href="index.html"><img src="images/logo.png" alt="logo" height="55"></a>
 		</div>
 		<div class ="search-box-wrapper">
 			<div class="search-box">
-			  <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></i>
+			  <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i>*
 			  </button>
 			  <input id="search-bar" type="text" class="input-search" placeholder="    Buscador...">
 			</div>
 		</div>
 		<div id="cred_bar">
 			<button class="usr_img_btn" onclick="dropUserMenu()">
-				<img class="usr_img" src="./images/miño.jpg">
+				<img class="usr_img" src="./images/miño.jpg" alt="user">
 			</button>
 			<div id="myDropdown" class="dropdown-content">
 				<button onclick="openPage('account.html')">Cuenta</button>
@@ -47,7 +47,7 @@
 			<!-- Standard sidebar -->
 			<div id="cred_bar_mobile">
 				<button class="usr_img_btn" onclick="dropUserMenu()">
-					<img class="usr_img" src="./images/miño.jpg">
+					<img class="usr_img" src="./images/miño.jpg" alt="user">
 				</button>
 				<div id="myDropdown_mobile" class="dropdown-content">
 					<button onclick="openPage('account.html')">Cuenta</button>
@@ -63,12 +63,12 @@
 					Descubre nuevas canciones
 				</div>
 			</div>
-			<div class="sidebar-button-notloged">
+			<div class="sidebar-button-notloged" id="ranking-listen">
 				<div class="sidebar-button-img">
-					<i class="fa-solid fa-heart" style="color: white;"></i>
+					<i class="fa-solid fa-ranking-star" style="color: white;"></i>
 					</div>
-				<div class="sidebar-button-text">
-					Top 50 del momento
+				<div class="sidebar-button-text" onclick="openPage('./allplaylist.html')">
+					Ranking de escucha
 				</div>
 			</div>
 			<div class="sidebar-button-loged"  onclick="openPage('./allplaylist.html')">
@@ -92,15 +92,13 @@
 			</div>
 		</div>
 		<div class="content" id="main_content">
-			<div class="section-space">br</div>
-			<div class="section-space">br</div>
 			<!-- Main content-->
 			<div class="playlist-wrapper">
 				<!-- We will use this wrapper for this too -->
 				<div class="playlist-title">
 					<h1>✨Crea tu nueva playlist✨</h1>
 				</div>
-				<h2>Primero danos un titulo: </h2>
+				<label for="playlist-title" style="font-size: 2.5rem;">Primero danos un titulo: </label>
 					<!-- Playlist title input -->
 				<div class="title">
 					<input id="playlist-title" type = "text" placeholder="Titulo de la playlist">
@@ -112,7 +110,7 @@
 				<div class="section">
 					<div class="section-title">Resultados</div>
 					<div class="section-content">
-						<span>Todavia no hay busqueda!</span>
+						<label for="search-bar">Todavia no hay busqueda!</label>
 					</div>
 			</div>
 		</div>
@@ -132,9 +130,10 @@
 				<a class="artist" id="artist" ></a>
 			</div>
 			<div class="bottom">
-				<video controls="" _autoplay="" name="media" id="song_file"></video>
+				<video controls="" id="song_file"></video>
 			</div>
 		</div>
+	</div>
 	</div>
 	<script src="script/userData.js"></script>
 	<script src="script/index.js"></script>
