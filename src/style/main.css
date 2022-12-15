@@ -1098,6 +1098,7 @@ background: #DBB2FF;
 }
 .ranking-users-section {
 	display: flex;
+    color: #9747FF;
 	flex-direction: row;
 	margin-left: auto;
 	margin-right: auto;	
