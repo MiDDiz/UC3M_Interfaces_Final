@@ -8,6 +8,8 @@ function get_parent(e)
 	let res = e.target.closest(".section-song2")
 	if (res == null)
 		res = e.target.closest(".section-song")
+	if (res == null)
+		res = e.target.closest(".rand-song")
 	return res;
 }
 /* return current logged user */
