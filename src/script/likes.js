@@ -1,8 +1,6 @@
-/*News script*/ 
 
-__init__();
-
-function __init__() {
+function yes() {
+    console.log("hola")
     let User = new UserData();
     User.getCookie();
     let likes = User.liked_songs;
@@ -23,3 +21,4 @@ function __init__() {
         i++
 }
 }
+yes();
