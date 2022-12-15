@@ -196,7 +196,7 @@ function startSearch(){
 	songs.forEach(song => {
 		$(".section-content").append(`
 			<div class="section-song">
-				<a class="round-button" onclick = "staticChangeSong('${song.cover}', '${song.title}', '${song.artist}', '${song.path}'$)">
+				<a class="round-button" onclick = "staticChangeSong('${song.cover}', '${song.title}', '${song.artist}', '${song.path}')">
 					<i class="fa fa-play fa-2x"></i>
 				</a>
 				<div class="cover-img">
