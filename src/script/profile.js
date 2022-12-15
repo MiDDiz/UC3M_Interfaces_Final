@@ -39,7 +39,7 @@ function __init__(){
 		switch_sidebar_notlogged();
 		return;
 	}
-  personalize();
+  	personalize();
 	switch_header_logged();
 	switch_header_logged_mobile();
 	switch_sidebar_logged();

@@ -215,6 +215,7 @@ body{
         align-items: center;
 
         background-color: #BB86FC;
+        z-index: 2;
     }
 
         .sidebar-button-notloged{
@@ -484,6 +485,7 @@ body{
                 text-align: center;
                 position:relative;
                 overflow:hidden;
+                z-index: 0;
 
             }
 
@@ -510,6 +512,7 @@ body{
                 min-height: 100%;
             }
             .prof-info-text {
+                color: #9747FF;
                 position: absolute;
                 top: 50%;
                 left: 50%;
