@@ -208,6 +208,9 @@ function hook_sidebar_buttons(){
 		handler.setStorage();
 		openPage("./playlist.html");
 	});
+	$("#ranking-listen").click(() => {
+		openPage("./ranking.html");
+	})
 }
 
 function get_image(){
@@ -226,16 +229,24 @@ async function countTimer(){
 	user = new UserData();
 	user.getCookie();
 
-	repr.addEventListener('pause', (event) => {
-		clearInterval(timer);
-	});
-	repr.addEventListener('play', (event) => {
-		timer = setInterval(() => {
-			user.getCookie();
-			console.log(`User timer: ${user.time}`);
-			user.addTime(1);
-		}, 1000);
-	});
+	try {
+		repr.addEventListener('pause', (event) => {
+			clearInterval(timer);
+		});
+	} catch (error) {
+		console.log("We dont have repr")
+	}
+	try {
+		repr.addEventListener('play', (event) => {
+			timer = setInterval(() => {
+				user.getCookie();
+				user.addTime(1);
+			}, 1000);
+		});
+	} catch (error) {
+		console.log("We dont have repr")
+	}
+	
 }
 
 function __init__() {
