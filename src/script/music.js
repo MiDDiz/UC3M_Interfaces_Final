@@ -82,7 +82,7 @@ var SongMaster = new SongHandler([
 ]);
 
 function changeSong(n) {
-	  var x = document.getElementById("player");
+	var x = document.getElementById("player");
     var coverArt = document.getElementById("cover_art");
     var songTitle = document.getElementById("song");
     var artistName = document.getElementById("artist");
@@ -97,6 +97,7 @@ function changeSong(n) {
 }
 
 function staticChangeSong(cover, title, artist, path) {
+	var x = document.getElementById("player");
     var coverArt = document.getElementById("cover_art");
     var songTitle = document.getElementById("song");
     var artistName = document.getElementById("artist");
@@ -106,8 +107,8 @@ function staticChangeSong(cover, title, artist, path) {
     artistName.innerHTML = artist;
     songFile.src = path;
     songFile.play();
-	$(".footer").hide()
-	$(".player").show()	
+	x.style.display = "flex"
+
 }
 
 function getElems(n){
