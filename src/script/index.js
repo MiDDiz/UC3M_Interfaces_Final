@@ -96,6 +96,14 @@ function switch_header_logged_mobile(){
 	}
 }
 
+function switch_header_notlogged(){
+	let scr_width = screen.width;
+
+	if (scr_width <= "600") {
+		$(".search-box").hide()
+	}
+}
+
 function switch_sidebar_notlogged(){
 	$(".sidebar-button-loged").hide();
 	$(".sidebar-button-notloged").show();
@@ -261,6 +269,7 @@ function __init__() {
 	/* Logica de usuario loggeado */
 	if (!is_logged()){
 		switch_sidebar_notlogged();
+		switch_header_notlogged();
 		return;
 	}
 	countTimer();

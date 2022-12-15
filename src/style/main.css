@@ -852,7 +852,11 @@ background: #DBB2FF;
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .likes-song{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .rand-song{
         height: 240px;
         min-width: 160px;
@@ -1347,8 +1351,13 @@ background: #DBB2FF;
     display: none;
 }
 
-.search-box-wrapper{
-    display: none;
+.input-search:focus{
+    width: 15em;
+}
+
+.btn-search:focus ~ .input-search{
+    display: block;
+    width: 15em;
 }
 
 .mobile-sidebar{
