@@ -69,7 +69,7 @@ function generatePlaylist(songArray) {
 				<span class="element-artists">${song.artist}</span>
 				<span class="element-time">${song.duration}</span>
 				<button class="element-remove" onclick="removeSong('${song.title}')">
-					<i class="fa fa-times" aria-hidden="true"></i>
+					<i class="fa fa-times" aria-hidden="true"></i><p style="color:white">'</p>
 				</button>
 			</div>
 		`);
