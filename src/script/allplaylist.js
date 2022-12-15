@@ -28,7 +28,6 @@ function generate_lists(){
         </div>
     `)
 	$(`#playlist-${playlists[pl].id}`).click(() => {
-		alert(1);
 		let hp = new HandlerPlaylist();
 		hp.id = playlists[pl].id;
 		hp.is_liked = false;
