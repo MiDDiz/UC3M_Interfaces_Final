@@ -83,6 +83,7 @@ var SongMaster = new SongHandler([
 
 function changeSong(n) {
 	var x = document.getElementById("player");
+	x.style.display = "flex"
     var coverArt = document.getElementById("cover_art");
     var songTitle = document.getElementById("song");
     var artistName = document.getElementById("artist");
@@ -91,7 +92,7 @@ function changeSong(n) {
     songTitle.innerHTML = SongMaster.songs[n].title;
     artistName.innerHTML = SongMaster.songs[n].artist;
     songFile.src = SongMaster.songs[n].path;
-	x.style.display = "flex"
+	
     songFile.play();
 
 }
@@ -106,8 +107,9 @@ function staticChangeSong(cover, title, artist, path) {
     songTitle.innerHTML = title;
     artistName.innerHTML = artist;
     songFile.src = path;
-    songFile.play();
 	x.style.display = "flex"
+    songFile.play();
+
 
 }
 
