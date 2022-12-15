@@ -87,6 +87,7 @@ function __init__(){
 		user.saveCookie();
 		openPage("./index.html");
 	})
+	
 }
 
 __init__();
