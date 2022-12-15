@@ -27,7 +27,7 @@
 		<!-- Search bar -->
 		<div class ="search-box-wrapper">
 			<div class="search-box">
-			  <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></i>
+			  <button class="btn-search"> <i class="fa-solid fa-magnifying-glass"> </i></i>
 
 			  </button>
 			  <input id="search-bar" type="text" class="input-search" placeholder="    Buscador...">
@@ -45,7 +45,7 @@
 		</div>
 		<div id="cred_bar">
 			<button class="usr_img_btn" onclick="dropUserMenu()">
-				<img class="usr_img" id="pfmv" src="./images/miño.jpg">
+				<img class="usr_img" id="pfmv" src="./images/miño.jpg"  alt="user">
 			</button>
 			<div id="myDropdown" class="dropdown-content">
 				<button onclick="openPage('account.html')">Cuenta</button>
@@ -58,7 +58,7 @@
 		<div class="sidebar" id="id-sidebar">
 			<div id="cred_bar_mobile">
 				<button class="usr_img_btn" onclick="dropUserMenu()">
-					<img class="usr_img" id="mainimage" src="./images/miño.jpg" >
+					<img class="usr_img" id="mainimage" src="./images/miño.jpg"  alt="user">
 				</button>
 				<div id="myDropdown_mobile" class="dropdown-content">
 					<button onclick="openPage('account.html')">Cuenta</button>
@@ -72,14 +72,6 @@
 					</div>
 				<div class="sidebar-button-text" onclick="openPage('./news.html')">
 					Descubre nuevas canciones
-				</div>
-			</div>
-			<div class="sidebar-button-notloged">
-				<div class="sidebar-button-img">
-					<i class="fa-solid fa-heart" style="color: white;"></i>
-					</div>
-				<div class="sidebar-button-text">
-					Top 50 del momento
 				</div>
 			</div>
 
@@ -115,8 +107,7 @@
 
 		</div>
 		<div class="content" id="main_content">
-			<div class="section-space">br</div>
-			<div class="section-space">br</div>
+			<br><br>
 			<div class="section">
 				<div class="section-title">
 					Tendencias
@@ -125,7 +116,7 @@
 					<div class="section-song">
 						<a class="round-button" onclick = "changeSong(0)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Die_For_You.png">
+							<img src="/src/images/Die_For_You.png" alt="song">
 							
 							<p class="title">Die For You</p>
 							<p class="artist">Garbbitz</p>	
@@ -135,7 +126,7 @@
 					<div class="section-song">
 						<a class="round-button" onclick = "changeSong(1)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Hong_Kong.jpg">
+							<img src="/src/images/Hong_Kong.jpg" alt="song">
 							<p class="title">Hong Kong</p>
 							<p class="artist">C.Tangana</p>	
 						</div>
@@ -143,7 +134,7 @@
 					<div class="section-song">
 						<a class="round-button" onclick = "changeSong(2)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Some_Say.jpg">
+							<img src="/src/images/Some_Say.jpg" alt="song">
 							<p class="title">Some Say</p>
 							<p class="artist">Felix Jaehn</p>	
 						</div>
@@ -151,7 +142,7 @@
 					<div class="section-song2">
 						<a class="round-button" onclick = "changeSong(3)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Shivers.png">
+							<img src="/src/images/Shivers.png" alt="song">
 							<p class="title">Shivers</p>
 							<p class="artist">Ed Sheeran</p>	
 						</div>
@@ -159,7 +150,7 @@
 					<div class="section-song2">
 						<a class="round-button" onclick = "changeSong(4)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/In_Too_Deep.jpeg">
+							<img src="/src/images/In_Too_Deep.jpeg" alt="song">
 							<p class="title">In Too Deep</p>
 							<p class="artist">Sum 41</p>	
 						</div>
@@ -167,7 +158,7 @@
 					<div class="section-song2">
 						<a class="round-button" onclick = "changeSong(5)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Save_Your_Tears.jpg">
+							<img src="/src/images/Save_Your_Tears.jpg" alt="song">
 							<p class="title">Save Your Tears</p>
 							<p class="artist">The Weeknd</p>	
 						</div>
@@ -185,7 +176,7 @@
 					<div class="section-song">
 						<a class="round-button" onclick = "changeSong(6)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Malbec.jpg">
+							<img src="/src/images/Malbec.jpg" alt="song">
 							<p class="title">Malbec</p>
 							<p class="artist">Duki, Bzrp</p>	
 						</div>
@@ -193,7 +184,7 @@
 					<div class="section-song">
 						<a class="round-button" onclick = "changeSong(7)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Miss_You.jpg">
+							<img src="/src/images/Miss_You.jpg" alt="song">
 							<p class="title">Miss You</p>
 							<p class="artist">Oliver Tree</p>	
 						</div>
@@ -201,7 +192,7 @@
 					<div class="section-song">
 						<a class="round-button" onclick = "changeSong(8)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Unholy.jpg">
+							<img src="/src/images/Unholy.jpg" alt="song">
 							<p class="title">Unholy</p>
 							<p class="artist">Sam Smith</p>	
 						</div>
@@ -209,7 +200,7 @@
 					<div class="section-song2">
 						<a class="round-button" onclick = "changeSong(9)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Sunroof.jpg">
+							<img src="/src/images/Sunroof.jpg" alt="song">
 							<p class="title">Sunroof</p>
 							<p class="artist">Nicky Youre</p>	
 						</div>
@@ -217,7 +208,7 @@
 					<div class="section-song2">
 						<a class="round-button" onclick = "changeSong(10)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Mary_On_A_Cross.jpeg">
+							<img src="/src/images/Mary_On_A_Cross.jpeg" alt="song">
 							<p class="title">Mary On A Cross</p>
 							<p class="artist">Ghost</p>	
 						</div>
@@ -225,7 +216,7 @@
 					<div class="section-song2">
 						<a class="round-button" onclick = "changeSong(11)"><i class="fa fa-play fa-2x"></i></a>
 						<div class="cover-img">
-							<img src="/src/images/Entertain_Me.jpeg">
+							<img src="/src/images/Entertain_Me.jpeg" alt="song">
 							<p class="title">Entertain Me</p>
 							<p class="artist">Ylona Garcia</p>	
 						</div>
