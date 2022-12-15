@@ -55,6 +55,12 @@ function changeDoms(user, domelem){
 	const usr_name = domelem.querySelector("#ranking-user-1");
 	const span_text = domelem.querySelector("span");
 
+
+	if (user == null){
+		domelem.style.visibility = "hidden";
+		return ;
+	}
+
 	usr_img.src = "./images/" + user.usr_img;
 	usr_name.textContent = user.username;
 	span_text.textContent = `Con ${formatTime(user.time)} de escucha`;
