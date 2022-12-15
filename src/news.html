@@ -112,15 +112,9 @@
 			<br><br><br><br><br><br>
 		</div>
 	</div>
-	
-	<div class="footer">
-		<div class="footer-msg">
-			<h2>¡Bienvenido a spotifin't, registrate para no perderte nada!</h2>
-		</div>
-	</div>
 	<div class="player" id="player">
 		<div class="left">
-			<img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Portada del álbum" id="cover_art">
+			<img src="./images/default_music.png" alt="Portada del álbum" id="cover_art">
 		</div>
 		<div class="right">
 		   <div class="top">
@@ -132,7 +126,42 @@
 			</div>
 		</div>
 	</div>
-	<!-- Home Page -->
+
+	<!-- Rightclick context menu structure-->
+
+	<div class="ctm-wrapper">
+		<div class="ctm-content">
+			<ul class="ctm-menu">
+			<li class="ctm-item ctm-unliked">
+				<!--Context menu item, aparece solo si el item clickado no está en me gusta-->
+				<i class="fa-solid fa-heart"></i>
+				<span>Añadir a me gusta</span>
+			</li>
+			<li class="ctm-item ctm-liked">
+					<!--Context menu item, aparece solo si el item clickado está en me gusta -->
+				<i class="fa-solid fa-heart-crack"></i>
+				<span>Quitar de me gusta  </span>
+			</li>
+			<li class="ctm-item ctm-playlist">
+					<div>
+					<i class="fa-solid fa-list"></i>
+					<span>Añadir a playlist</span>
+					</div>
+				<i class="ctm-play fa-solid fa-caret-right"></i>
+				<!-- Context submenu playlists-->
+				<ul class="ctm-playlist-menu">
+					<li class="ctm-item ctm-noplaylists">
+						<i class="fa fa-ban" aria-hidden="true"></i>
+						<span>No playlists</span>
+					</li>
+				</ul>
+			</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--<script src="context-menu.js"></script> -->
+	<script src="context-menu.js"></script>
 	<script src="script/userData.js"></script>
 	<script src="script/index.js"></script>
 	<script src="script/music.js"></script>
