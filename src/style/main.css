@@ -1065,6 +1065,71 @@ background: #DBB2FF;
 	margin-right: 1.5em;
 }
 
+
+/* ----------------------- RANKING CSS ---------------------- */  
+.ranking-content {
+	--margin-top: 75px;
+	margin: 2.5%;
+	height: calc(100% - var(--margin-top));
+	margin-top: var(--margin-top);
+	width: 95%;
+}
+.ranking-users {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.ranking-usr-img {
+	--img-size: 8em;
+	background: none;
+	border-radius: calc(var(--img-size)/2);
+	cursor: pointer;
+	width: var(--img-size);
+	height: var(--img-size);
+}
+.ranking-user{
+	display: flex;
+	flex-direction: column;
+}
+.ranking-user .playlist-title {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;	
+}
+.ranking-users-section {
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;	
+	justify-content: space-between;
+}
+.ranking-user img{
+	margin-left: auto;
+	margin-right: auto;	
+}
+.ranking-user .ranking-subtitle {
+	margin-left: auto;
+	margin-right: auto;	
+	font-family: 'Roboto';
+    font-style: normal;
+	display: flex;
+	flex-direction: column;
+}
+#user-top-2{
+	margin-right: 2.5em;
+}
+#user-top-3{
+	margin-left: 2.5em;
+}
+.ranking-user .ranking-subtitle h4{
+	font-weight: 900;
+	font-size: 2em;
+	margin: 0 auto;
+
+	color: #9747FF;
+}
+
+
 /* ----------------------- Common ---------------------- */    
 .footer {
     background-color: #985EFF;
