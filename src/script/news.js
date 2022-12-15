@@ -16,7 +16,7 @@ function __init__() {
             <div class="rand-song">
                 <a class="round-button" onclick = "changeSong(${song_numb_list[song]})"><i class="fa fa-play fa-2x"></i></a>
                 <div class="cover-img">
-                    <img src= ${newsong.cover}>
+                    <img src= ${newsong.cover} alt="song">
                     <p class="title">${newsong.title}</p>
                     <p class="artist">${newsong.artist}</p>	
                 </div>
