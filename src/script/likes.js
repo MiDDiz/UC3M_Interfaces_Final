@@ -8,17 +8,21 @@ function yes() {
     while (i<likes.length){
         console.log(likes.length);
         console.log(likes[i].path);
+		let song = likes[i];
+
         $(".likes-song").append(`
-            <div class="rand-song">
-                <a class="round-button" onclick = "staticChangeSong(${likes[i].cover},${likes[i].title},${likes[i].artist},${likes[i].path})"><i class="fa fa-play fa-2x"></i></a>
-                <div class="cover-img">
-                    <img src= ${likes[i].cover}>
-                    <p class="title">${likes[i].title}</p>
-                    <p class="artist">${likes[i].artist}</p>	
-                </div>
-            </div>
-        `)
+		<div class="section-song">
+			<a class="round-button" onclick = "staticChangeSong('${song.cover}', '${song.title}', '${song.artist}', '${song.path}')">
+				<i class="fa fa-play fa-2x"></i>
+			</a>
+			<div class="cover-img">
+				<img src=${song.cover}>
+				<p class="title">${song.title}</p>
+				<p class="artist">${song.artist}</p>	
+			</div>
+		</div>
+        `);
         i++
-}
+	}
 }
 yes();

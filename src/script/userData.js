@@ -12,7 +12,7 @@ class UserData {
 
 	addTime(unit){
 		this.time += unit;
-		user.saveCookie();
+		this.saveCookie();
 	}
 
 	populateFromJSON(cookie){
