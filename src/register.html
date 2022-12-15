@@ -26,19 +26,20 @@
 		<div class="separator"></div>
         <div class= "regsubody">
 			<div class="reginfo">
-				<input id="reg_email" type = "text" placeholder="Dirección de correo electrónico">
-				<input id="reg_username" type = "text" placeholder="Nombre de usuario">
-				<input id="reg_passwd"type = "password" placeholder="Contraseña">
+				<input id="reg_email" type = "text" placeholder="Dirección de correo electrónico"><label for="reg_email"> Obligatorio*</label>
+				<input id="reg_username" type = "text" placeholder="Nombre de usuario"><label for="reg_username"> Obligatorio*</label>
+				<input id="reg_passwd" type = "password" placeholder="Contraseña"><label for="reg_passwd"> Obligatorio*</label>
 				<div class="regbox">
 					<div class="reg_regbox_div">
-						<p>Fecha de nacimiento</p>
+						<label for="reg_date">Fecha de nacimiento</label>
 						<input id="reg_date" type = "date">
 					</div>
 					<div class="reg_regbox_div">        
-						<p>Foto de perfil</p>
+						<label for="reg_img">Foto de perfil</label>
 						<input id="reg_img" type="file" accept="image/*">
 					</div>  
 				</div>
+				<br>
 				<input type="checkbox" id="TyC" name="TyC">
                 <label for="TyC">He leído y acepto los términos y condiciones*</label>
 					
@@ -55,6 +56,7 @@
 		
 	<div class="footer">
 		
+	</div>
 	</div>
 	<script src="script/userData.js"></script>
 	<script src="script/register.js"></script>
