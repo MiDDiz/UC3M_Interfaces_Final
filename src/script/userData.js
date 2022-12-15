@@ -7,6 +7,12 @@ class UserData {
 		this.usr_img = null;
 		this.liked_songs = [];
 		this.user_lists = [];
+		this.time = 0;
+	}
+
+	addTime(unit){
+		this.time += unit;
+		user.saveCookie();
 	}
 
 	populateFromJSON(cookie){
@@ -17,6 +23,7 @@ class UserData {
 		this.usr_img = cookie["usr_img"];
 		this.liked_songs = cookie["liked_songs"];
 		this.user_lists = cookie["user_lists"];
+		this.time = cookie["time"];
 	}
 
 	alreadyLiked(title){

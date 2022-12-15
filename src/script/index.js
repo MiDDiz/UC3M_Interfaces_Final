@@ -1,6 +1,7 @@
 /* Index script */
 let is_sidebar_on=0;
-
+let user;
+var timer;
 __init__();
 
 
@@ -219,8 +220,25 @@ function get_image(){
 	
 }
 
+async function countTimer(){
+	let repr = document.getElementById("song_file");
+	
+	user = new UserData();
+	user.getCookie();
+
+	repr.addEventListener('pause', (event) => {
+		clearInterval(timer);
+	});
+	repr.addEventListener('play', (event) => {
+		timer = setInterval(() => {
+			user.getCookie();
+			console.log(`User timer: ${user.time}`);
+			user.addTime(1);
+		}, 1000);
+	});
+}
+
 function __init__() {
-	/* Lógica global*/
 	hide_side_bar_on_mobile();
 	hide_user_img();
 	hook_click_hide_dropdown();
@@ -234,6 +252,7 @@ function __init__() {
 		switch_sidebar_notlogged();
 		return;
 	}
+	countTimer();
 	switch_header_logged();
 	switch_header_logged_mobile();
 	switch_sidebar_logged();
