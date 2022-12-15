@@ -22,11 +22,11 @@
 			<i class="fa-solid fa-bars" style="color: white;"></i>
 		</div>
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt="logo" href height="55px"></a>
+			<a href="index.html"><img src="images/logo.png" alt="logo" height="55"></a>
 		</div>
 		<div id="cred_bar">
 			<button class="usr_img_btn" onclick="dropUserMenu()">
-				<img class="usr_img" src="./images/miño.jpg">
+				<img class="usr_img" src="./images/miño.jpg" alt="user">
 			</button>
 			<div id="myDropdown" class="dropdown-content">
 				<button onclick="openPage('account.html')">Cuenta</button>
@@ -39,7 +39,7 @@
 		<div class="sidebar" id="id-sidebar">
 			<div id="cred_bar_mobile">
 				<button class="usr_img_btn" onclick="dropUserMenu()">
-					<img class="usr_img" id="pfmv" src="./images/miño.jpg">
+					<img class="usr_img" id="pfmv" src="./images/miño.jpg" alt="user">
 				</button>
 				<div id="myDropdown_mobile" class="dropdown-content">
 					<button onclick="openPage('account.html')">Cuenta</button>
@@ -55,12 +55,12 @@
 					Descubre nuevas canciones
 				</div>
 			</div>
-			<div class="sidebar-button-notloged">
+			<div class="sidebar-button-notloged" id="ranking-listen">
 				<div class="sidebar-button-img">
-					<i class="fa-solid fa-heart" style="color: white;"></i>
+					<i class="fa-solid fa-ranking-star" style="color: white;"></i>
 					</div>
-				<div class="sidebar-button-text">
-					Top 50 del momento
+				<div class="sidebar-button-text" onclick="openPage('./allplaylist.html')">
+					Ranking de escucha
 				</div>
 			</div>
 			<div class="sidebar-button-loged"  onclick="openPage('./allplaylist.html')">
@@ -84,8 +84,7 @@
 			</div>
 		</div>
 		<div class="content" id="main_content">
-			<div class="section-space">br</div>
-			<div class="section-space">br</div>
+			<br><br>
 			<!-- Main content-->
 			<div class="playlist-wrapper">
 				<!-- Playlist wrapper -->
@@ -130,7 +129,7 @@
 				<a class="artist" id="artist" ></a>
 			</div>
 			<div class="bottom">
-				<video controls="" _autoplay="" name="media" id="song_file"></video>
+				<video controls="" id="song_file"></video>
 			</div>
 		</div>
 	</div>
