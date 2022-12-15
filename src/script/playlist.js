@@ -15,6 +15,24 @@ function __init__() {
 	handler_playlist.load();
 	user = loadUser();
 	generate(handler_playlist, user);
+	hide_side_bar_on_mobile();
+	hide_user_img();
+	hook_click_hide_dropdown();
+	if (get_current_site() == "index.html"){
+		$("#search-bar").keyup(() => {
+			startSearch();
+		})
+	}
+	/* Logica de usuario loggeado */
+	if (!is_logged()){
+		switch_sidebar_notlogged();
+		return;
+	}
+	switch_header_logged();
+	switch_header_logged_mobile();
+	switch_sidebar_logged();
+	hook_sidebar_buttons();
+	
 }
 
 function removeSong(titulo){
