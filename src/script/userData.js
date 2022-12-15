@@ -155,7 +155,7 @@ class UserData {
 	validate (){
 		for (const [key, value] of Object.entries(this)){
 			if (((value == "") || (value == null)) && 
-				((key != "usr_img") && (key != "liked_songs") && (key != "user_lists")))
+				((key != "usr_img") && (key != "liked_songs") && (key != "user_lists") && (key != "time")))
 			{
 				console.log(key);
 				console.log(((value == "") || (value == null)));

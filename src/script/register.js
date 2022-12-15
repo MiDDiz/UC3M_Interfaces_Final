@@ -37,6 +37,7 @@ function throw_dialog(msg)
 }
 
 function validate_user(user){
+	console.log(user);
 	switch (user.validate()) {
 		case -1:
 			throw_dialog("No puedes dejar campos obligatorios vacios!");
