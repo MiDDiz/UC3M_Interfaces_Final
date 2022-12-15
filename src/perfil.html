@@ -88,20 +88,33 @@
 			<img src = "images/nestor.jpg" class = "prof-info-bg" id="prof-info-bgp">
 			<div class = "prof-info-text">Nestor</div>
 			</div>
+			<div class="section" id="textbox">
+				<div class="section-space"><br></div>
+                <div class="section-space"><br></div>
+					<div class="section-title-textbox">
+						Datos del usuario
+					</div>
+					
+					<div class="textbox-field">
+						<label>Nombre de usuario : </label><label id="acc-curr-user">nombre</label> 
+
+					</div>
+					<div class="textbox-field">
+						<label>Email : </label><label id="acc-curr-email">correo</label> 
+
+					</div>
+					<div class="textbox-field">
+						<label>Fecha de nacimiento : </label><label id="acc-curr-birth">birthday</label> 
+
+					</div>
+			</div>
 			<div class="section">
-                <div class="section-space"><br></div>
-                <div class="section-space"><br></div>
+
 				<div class="section-title">
 					Canciones que te gustan
 				</div>
                 <div class="news-rand-song" id="container-rand-song">
-                    
                 </div>
-				<div class="next-refresh-button" onclick="openPage('./news.html')">
-					<div style="align-self: center;">
-						Descubre mas musica
-					</div>
-				</div>
             </div>
 		</div>
 	</div>
@@ -162,5 +175,6 @@
 <script src="script/news.js"></script>
 <script src="script/context-menu.js"></script>
 <script src="script/profile.js"></script>
+<script src="script/account.js"></script>
 </body>
 </html>
