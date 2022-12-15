@@ -852,7 +852,11 @@ background: #DBB2FF;
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .likes-song{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .rand-song{
         height: 240px;
         min-width: 160px;
