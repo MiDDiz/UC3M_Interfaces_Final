@@ -1347,8 +1347,13 @@ background: #DBB2FF;
     display: none;
 }
 
-.search-box-wrapper{
-    display: none;
+.input-search:focus{
+    width: 15em;
+}
+
+.btn-search:focus ~ .input-search{
+    display: block;
+    width: 15em;
 }
 
 .mobile-sidebar{
