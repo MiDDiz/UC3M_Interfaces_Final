@@ -1,6 +1,7 @@
 /* Index script */
 let is_sidebar_on=0;
-
+let user;
+var timer;
 __init__();
 
 
@@ -215,6 +216,9 @@ function hook_sidebar_buttons(){
 		handler.setStorage();
 		openPage("./playlist.html");
 	});
+	$("#ranking-listen").click(() => {
+		openPage("./ranking.html");
+	})
 }
 
 function get_image(){
@@ -227,8 +231,33 @@ function get_image(){
 	
 }
 
+async function countTimer(){
+	let repr = document.getElementById("song_file");
+	
+	user = new UserData();
+	user.getCookie();
+
+	try {
+		repr.addEventListener('pause', (event) => {
+			clearInterval(timer);
+		});
+	} catch (error) {
+		console.log("We dont have repr")
+	}
+	try {
+		repr.addEventListener('play', (event) => {
+			timer = setInterval(() => {
+				user.getCookie();
+				user.addTime(1);
+			}, 1000);
+		});
+	} catch (error) {
+		console.log("We dont have repr")
+	}
+	
+}
+
 function __init__() {
-	/* Lógica global*/
 	hide_side_bar_on_mobile();
 	hide_user_img();
 	hook_click_hide_dropdown();
@@ -243,6 +272,7 @@ function __init__() {
 		switch_header_notlogged();
 		return;
 	}
+	countTimer();
 	switch_header_logged();
 	switch_header_logged_mobile();
 	switch_sidebar_logged();

@@ -67,7 +67,7 @@ body{
   /* Links inside the dropdown */
   .dropdown-content button {
 	cursor: pointer;
-	color: #a98ed5;
+	color: #7F39FB;
 	padding: 1em 0.2em;
 	text-decoration: none;
 	width: 100%;
@@ -295,7 +295,7 @@ body{
 
         display: flex;
         flex-direction: column;
-        background-color: white;
+        background-color: #FFFFFF;
     }
         
 
@@ -351,6 +351,7 @@ body{
                 width: 100%;
 
                 font-size: 50px;
+                color:#7F39FB;
 
                 padding: 0;
                 margin-bottom: 5px;
@@ -758,7 +759,7 @@ background: #DBB2FF;
     height: 100%;
 }
     .account-title{
-        color: #a98ed5;
+        color: #7F39FB;
         margin-top: 5px;
         width: 100%;
         height: 70px;
@@ -766,6 +767,10 @@ background: #DBB2FF;
         text-align: center;
     }
     .account-image{
+        color: #7F39FB;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
@@ -795,7 +800,7 @@ background: #DBB2FF;
             padding: 10px;
 
             font-size: 20px;
-            color:rgba(169, 142, 213, 1)
+            color: #7F39FB;
         }
 
     .account-change-button{
@@ -1074,7 +1079,7 @@ background: #DBB2FF;
     margin: auto;
     text-align: center;
     color: white;
-    font-size: 0.95em;
+    font-size: 1.5em;
 }
 
 .player {
@@ -1211,6 +1216,7 @@ background: #DBB2FF;
 	width: 14%;
 	border-radius: 10px;
 	background: #fff;
+    color:#7F39FB;
 	box-shadow: 0 12px 35px rgba(0,0,0,0.1);
 	height: fit-content;
 	min-width: 180px;

@@ -7,22 +7,23 @@
 	<title>Spotifyn't</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/ranking.css">
 	<!-- JQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- Home Page -->
-	<script src="script/index.js"></script>
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+	<!-- Home Page -->
 	<div class="header">
 		<div class="mobile-sidebar" onclick="openMobileSidebar()">
 			<i class="fa-solid fa-bars" style="color: white;"></i>
 		</div>
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt="logo" height="55"></a>
+			<a href="index.html"><img src="images/logo.png" alt="logo" href height="55px"></a>
 		</div>
 		<div class="sign-log-in-button" onclick="openPage('./register.html')">
 			<div style="align-self: center;">
@@ -36,7 +37,7 @@
 		</div>
 		<div id="cred_bar">
 			<button class="usr_img_btn" onclick="dropUserMenu()">
-				<img class="usr_img" id="pfmv" src="./images/miño.jpg" alt="user">
+				<img class="usr_img" id="pfmv" src="./images/miño.jpg">
 			</button>
 			<div id="myDropdown" class="dropdown-content">
 				<button onclick="openPage('account.html')">Cuenta</button>
@@ -45,11 +46,12 @@
 			</div>
 		</div>	
 	</div>
+	<!-- End header -->
 	<div class="body-wraper">
 		<div class="sidebar" id="id-sidebar">
 			<div id="cred_bar_mobile">
 				<button class="usr_img_btn" onclick="dropUserMenu()">
-					<img class="usr_img" id="mainimg" src="./images/miño.jpg"  alt="user">
+					<img class="usr_img" id="mainimage" src="./images/miño.jpg" >
 				</button>
 				<div id="myDropdown_mobile" class="dropdown-content">
 					<button onclick="openPage('account.html')">Cuenta</button>
@@ -57,31 +59,31 @@
 					<button onclick="log_out()">Cerrar Sesion</button>
 				</div>
 			</div>
-			<div class="sidebar-button-notloged" onclick="openPage('./news.html')">
+			<div class="sidebar-button-notloged">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-star" style="color: white;"></i>
 					</div>
-				<div class="sidebar-button-text">
+				<div class="sidebar-button-text" onclick="openPage('./news.html')">
 					Descubre nuevas canciones
 				</div>
 			</div>
-			<div class="sidebar-button-notloged" id="ranking-listen">
+			<div class="sidebar-button-notloged">
 				<div class="sidebar-button-img">
-					<i class="fa-solid fa-ranking-star" style="color: white;"></i>
+					<i class="fa-solid fa-heart" style="color: white;"></i>
 					</div>
-				<div class="sidebar-button-text" onclick="openPage('./allplaylist.html')">
-					Ranking de escucha
+				<div class="sidebar-button-text">
+					Top 50 del momento
 				</div>
 			</div>
-			<div class="sidebar-button-loged" onclick="openPage('./allplaylist.html')">
+			<div class="sidebar-button-loged">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-layer-group" style="color: white;"></i>
 					</div>
-				<div class="sidebar-button-text">
+				<div class="sidebar-button-text" onclick="openPage('./allplaylist.html')">
 					Playlist creadas
 				</div>
 			</div>
-			<div class="sidebar-button-loged" id="liked-songs" onclick="openPage('./playlist.html')">
+			<div class="sidebar-button-loged" id="liked-songs">
 				<div class="sidebar-button-img">
 					<i class="fa-solid fa-heart" style="color: white;"></i>
 					</div>
@@ -94,41 +96,53 @@
 			</div>
 
 		</div>
-        <div class="account-content">
-				<br><br><br>
-                <div class="account-title">Ajustes de Cuenta </div>
-				<div class="account-image">
-					<label for="acc_img">Foto de perfil:</label>
-					<img class="account-img" id="user-img" src="./images/miño.jpg"  alt="user">
+		<!-- End sidebar -->
+		<div class="content">
+			<div class="ranking-content" id="main_content">
+				<div class="playlist-title">
+					<h2>Top usuarios</h2>
 				</div>
-				<div class="account-image-button">
-					<input id="acc_img" type="file" accept="image/*">
-				</div>
-				<div class="account-data">
-					<div class="account-field">
-						<label for="acc_username" >Nombre de usuario : </label><label id="acc-curr-user">nombre</label> 
-						<input id="acc_username" type = "text" placeholder="Nuevo nombre de usuario">
+				<div class="ranking-users">
+					<div class="ranking-users-section ranking-users-top">
+						<div id="user-top-1" class="ranking-user">
+							<div class="playlist-title">
+								<h3>Top 1</h3>
+							</div>
+							<img class="ranking-usr-img" src="./images/nestor.jpg">
+							<div class="ranking-subtitle">
+								<h4 id="ranking-user-1">Nestor</h4>
+								<span>con 4:30 minutos de escucha!</span>
+							</div>
+						</div>
+					</div>
+					<div class="ranking-users-section">
+						<div id="user-top-2" class="ranking-user">
+							<div class="playlist-title">
+								<h3>Top 2</h3>
+							</div>
+							<img class="ranking-usr-img" src="./images/nestor.jpg">
+							<div class="ranking-subtitle">
+								<h4 id="ranking-user-1">Nestor</h4>
+								<span>con 4:30 minutos de escucha!</span>
+							</div>
+						</div>
 
-					</div>
-					<div class="account-field">
-						<label for="acc_passwd">Contraseña :</label><label> *******</label> 
-						<input id="acc_passwd" type = "password" placeholder="Contraseña">
-					</div>
-					<div class="account-field">
-						<label for="acc_email">Email : </label><label id="acc-curr-email">correo</label> 
-						<input id="acc_email" type = "text" placeholder="Nuevo email">
-
-					</div>
-					<div class="account-field">
-						<label for="acc_date">Fecha de nacimiento : </label><label id="acc-curr-birth">birthday</label> 
-						<input id="acc_date" type = "date">
+						<div id="user-top-3" class="ranking-user">
+							<div class="playlist-title">
+								<h3>Top 3</h3>
+							</div>
+							<img class="ranking-usr-img" src="./images/nestor.jpg">
+							<div class="ranking-subtitle">
+								<h4 id="ranking-user-1">Nestor</h4>
+								<span>con 4:30 minutos de escucha!</span>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="account-change-button">Cambiar datos</div>
-        </div>
-    </div>
-<script src="script/userData.js"></script>
-<script src="script/index.js"></script>
-<script src="script/account.js"></script>
+			</div>
+		</div>
+	</div>
+	<script src="script/userData.js"></script>
+	<script src="script/index.js"></script>
+	<script src="script/ranking.js"></script>
 </body>
-</html>

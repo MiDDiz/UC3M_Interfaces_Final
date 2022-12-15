@@ -94,7 +94,6 @@ function changeSong(n) {
     songFile.src = SongMaster.songs[n].path;
 	
     songFile.play();
-
 }
 
 function staticChangeSong(cover, title, artist, path) {
@@ -108,8 +107,6 @@ function staticChangeSong(cover, title, artist, path) {
     artistName.innerHTML = artist;
     songFile.src = path;
 	x.style.display = "flex"
-    songFile.play();
-
 
 }
 
