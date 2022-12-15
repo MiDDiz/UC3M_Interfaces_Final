@@ -58,7 +58,6 @@ body{
 	display: none;
 	position: absolute;
 	transform: translate(-50%, -0.5rem);
-	background-color: none;
 	min-width: 8rem;
 	z-index: 999;
 	border-radius: 1rem;
@@ -132,7 +131,6 @@ body{
 		color:rgba(0, 0, 0, 0.5);
 		font-size: 0.75rem;
 		letter-spacing: 2px;
-		initial-letter: 2em;
 		font-weight: 70;
 	  }
 	  .btn-search{
@@ -427,7 +425,6 @@ body{
                     font-size:20px;
                     opacity: 0;                    font-weight:bold;
                     transition: all 0.3s ease;
-                    float:rig;
                 }
                 .round-button:hover {
                     background-color: rgba(0,0,0,0.8);
@@ -1249,7 +1246,6 @@ background: #DBB2FF;
 	font-size:20px;
 	opacity: 0;                    font-weight:bold;
 	transition: all 0.3s ease;
-	float:rig;
 }
 .round-button-add:hover {
 	background-color: rgba(0,0,0,0.8);
